@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
 
       <main className="flex flex-col h-screen">
         <header className="bg-white px-4 flex items-center justify-between h-[60px] flex-none">
-          <a href="/" className="text-sm text-black font-almarai tracking-wide">OWAINL.co</a>
+          <Link className="text-sm text-black font-almarai tracking-wide" href="/">OWAINL.co</Link>
         </header>
         <section className="flex justify-center items-center w-full flex-1">
           <div>
