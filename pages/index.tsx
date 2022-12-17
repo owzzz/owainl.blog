@@ -39,8 +39,21 @@ export default function Home() {
               <p className={`${roboto.variable} font-body`}>Building Things At</p> 
               <Image src="/apple.svg" className="ml-2 relative bottom-0.5" alt="Apple Logo" width={20} height={20} />
             </div>
-
             <p className={`${roboto.variable} font-body text-xs text-black mt-6`}>Website development in progress...</p>
+
+            <div className='mt-24'>
+              <ul className='flex items-center space-x-3'>
+                <li className='pr-0.5'>
+                  <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">Linkedin</Link>
+                </li>
+                <li className='pr-0.5'>
+                  <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://twitter.com/Owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Twitter</Link>
+                </li>
+                <li className='pr-0.5'>
+                  <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="http://github.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Github</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <footer className="flex-none flex px-6 md:px-4 justify-end items-center h-[50px] bg-gray-100 border-t border-gray-200">
