@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -31,6 +32,20 @@ export default function Home() {
           <span className="text-xs text-gray-600">V0.1</span>
         </footer>
       </main>
+
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-E7YNXMSZ51"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-E7YNXMSZ51');
+        `}
+      </Script>
     </div>
   );
 }
