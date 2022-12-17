@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['var(--font-roboto)'],
-        almarai: ['var(--font-almarai)'],
+        'body': ['var(--font-roboto)'],
+        'title': ['var(--font-beVietnamPro)']
       },
     },
   },
