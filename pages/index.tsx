@@ -15,6 +15,7 @@ export default function Home() {
       <main className="flex flex-col h-screen">
         <header className="bg-white px-6 md:px-4 flex items-center justify-between h-[60px] flex-none">
           <Link className="text-sm text-black font-almarai tracking-wide" href="/">OWAINL.co</Link>
+          <Link className="text-xs font-almarai hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</Link>
         </header>
         <section className="flex justify-center items-center w-full flex-1">
           <div className="px-6 md:px-4">
