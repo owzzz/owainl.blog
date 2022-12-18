@@ -2,20 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
-import { Roboto, Be_Vietnam_Pro } from '@next/font/google';
-
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-roboto',
-});
-
-const beVietnamPro = Be_Vietnam_Pro({
-  weight: '500',
-  subsets: ['latin'],
-  variable: '--font-beVietnamPro',
-});
-
+import { roboto, beVietnamPro } from '../lib/fonts';
 
 export default function Home() {
   return (
@@ -30,13 +17,21 @@ export default function Home() {
         <header className={`${beVietnamPro.variable} flex items-center justify-center font-body bg-white px-6 md:px-4 h-[60px] flex-none`}>
           <div className="flex items-center justify-between max-w-6xl w-full">
             <Link className="text-sm text-black tracking-wide" href="/">OWAINL.co</Link>
-            <Link className="text-xs hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</Link>
+            <ul>
+              <li><Link className="text-xs hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</Link></li>
+            </ul>
           </div>
         </header>
         <section className="flex justify-center items-center w-full flex-1">
           <div className="px-6 md:px-4">
-            <h1 className={`${beVietnamPro.variable} font-title text-2xl md:text-3xl tracking-wide leading-normal`}>Owain Llewellyn<br /><span className="text-3xl md:text-5xl mt-2 block">Software Engineer &amp; Designer<span className="animate-blink">_</span></span></h1>
-            <p className={`${roboto.variable} font-body text-gray-500 mt-4 leading-relaxed`}>Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas.</p>
+            <h1 className={`${beVietnamPro.variable} font-title text-2xl md:text-3xl tracking-wide leading-normal`}>Owain Llewellyn<br />
+              <span className="text-3xl md:text-5xl mt-2 block">Software Engineer &amp; Designer<span className="animate-blink">_</span></span>
+            </h1>
+            
+            <p className={`${roboto.variable} font-body text-gray-500 mt-4 leading-relaxed`}>
+              Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas.
+            </p>
+            
             <div className={`flex mt-2 items-center text-gray-500`}>
               <p className={`${roboto.variable} font-body`}>Building Things At</p> 
               <Image src="/apple.svg" className="ml-2 relative bottom-0.5" alt="Apple Logo" width={20} height={20} />
