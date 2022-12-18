@@ -27,9 +27,11 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col h-screen">
-        <header className={`${beVietnamPro.variable} font-body bg-white px-6 md:px-4 flex items-center justify-between h-[60px] flex-none`}>
-          <Link className="text-sm text-black tracking-wide" href="/">OWAINL.co</Link>
-          <Link className="text-xs hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</Link>
+        <header className={`${beVietnamPro.variable} flex items-center justify-center font-body bg-white px-6 md:px-4 h-[60px] flex-none`}>
+          <div class="flex items-center justify-between max-w-6xl w-full">
+            <Link className="text-sm text-black tracking-wide" href="/">OWAINL.co</Link>
+            <Link className="text-xs hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</Link>
+          </div>
         </header>
         <section className="flex justify-center items-center w-full flex-1">
           <div className="px-6 md:px-4">
