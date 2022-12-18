@@ -33,7 +33,7 @@ export default function Home() {
         </header>
         <section className="flex justify-center items-center w-full flex-1">
           <div className="px-6 md:px-4">
-            <h1 className={`${beVietnamPro.variable} font-title text-2xl md:text-3xl tracking-wide leading-normal`}>Owain Llewellyn<br /><span className="text-3xl md:text-5xl mt-2 block">Software Engineer &amp; Designer_</span></h1>
+            <h1 className={`${beVietnamPro.variable} font-title text-2xl md:text-3xl tracking-wide leading-normal`}>Owain Llewellyn<br /><span className="text-3xl md:text-5xl mt-2 block">Software Engineer &amp; Designer<span className="animate-blink">_</span></span></h1>
             <p className={`${roboto.variable} font-body text-gray-500 mt-4 leading-relaxed`}>Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas.</p>
             <div className={`flex mt-2 items-center text-gray-500`}>
               <p className={`${roboto.variable} font-body`}>Building Things At</p> 
