@@ -41,7 +41,6 @@ export default function Home() {
               <p className={`${roboto.variable} font-body`}>Building Things At</p> 
               <Image src="/apple.svg" className="ml-2 relative bottom-0.5" alt="Apple Logo" width={20} height={20} />
             </div>
-            <p className={`${roboto.variable} font-body text-xs text-black mt-6`}>Website development in progress...</p>
 
             <div className='mt-24'>
               <ul className='flex items-center space-x-3'>
