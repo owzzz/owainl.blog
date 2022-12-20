@@ -1,6 +1,6 @@
 import './globals.css';
 
-import Head from 'next/head';
+
 import Script from 'next/script';
 import Footer from './footer';
 import Header from './header';
@@ -12,13 +12,7 @@ export type ChildNode = {
 export default function Layout({ children }: ChildNode) {
   return (
     <html lang="en">
-      <Head>
-        <title>Owain Llewellyn - Software Engineer / Designer, Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas. Austin TX.</title>
-        <meta name="description" content="Owain Llewellyn - Software Engineer / Designer, Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas. Austin TX." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body className="flex flex-col h-screen">
-
         <Header />
         <main className='flex-1 flex items-center justify-center'>
           {children}
