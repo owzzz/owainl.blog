@@ -1,15 +1,15 @@
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllPostIds, getPost, Path } from '../../lib/posts';
 
-export async function getStaticProps({ params }: { params: { id: string }}) {
-  const postData = getPostData(params.id);
+export async function getStaticProps({ params }: { params: { id: string }}): Promise< { props: { post: Post } }> {
+  const post = getPost(params.id);
   return {
     props: {
-      postData,
+      post,
     },
   };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<{ paths: Path[], fallback: boolean }> {
   const paths = getAllPostIds();
   return {
     paths,
@@ -18,13 +18,13 @@ export async function getStaticPaths() {
 }
 
 export type Post = {
-    id: number,
+    id: string,
     date: string,
-    title: string,
+    title?: string,
 }
 
 export default function Post({ post }: { post: Post }) {
   return <main>
-    <h1>{post.id}</h1>
+    <h1>{post.title}</h1>
   </main>;
 }

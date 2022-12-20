@@ -1,13 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { Post } from '../pages/posts/[id]';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export function getSortedPostsData() {
+export type Path = {
+  params: {
+    id: string,
+  }
+}
+
+export function getSortedPosts(): Post[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPosts = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
 
@@ -22,10 +29,10 @@ export function getSortedPostsData() {
     return {
       id,
       ...matterResult.data,
-    };
+    } as Post;
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+  return allPosts.sort((a: Post, b: Post) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -34,7 +41,7 @@ export function getSortedPostsData() {
   });
 }
 
-export function getAllPostIds() {
+export function getAllPostIds(): Path[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
   return fileNames.map((fileName) => {
@@ -46,7 +53,7 @@ export function getAllPostIds() {
   });
 }
 
-export function getPostData(id) {
+export function getPost(id: string): Post {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -57,5 +64,5 @@ export function getPostData(id) {
   return {
     id,
     ...matterResult.data,
-  };
+  } as Post;
 }
