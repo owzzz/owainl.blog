@@ -7,7 +7,7 @@ export default function Header() {
         <div className="flex items-center justify-between max-w-6xl w-full">
         <Link className="text-sm text-black tracking-wide" href="/">OWAINL.co</Link>
         <ul>
-            <li><Link className="text-xs hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</Link></li>
+            <li><Link className="text-xs hover:underline" href="mailto:owain@owainl.co?subject=Website%20enquiry">Contact</Link></li>
         </ul>
         </div>
     </header>
