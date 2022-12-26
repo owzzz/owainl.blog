@@ -1,5 +1,9 @@
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import { roboto, beVietnamPro } from '../lib/fonts';
 
-export default MyApp;
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <div className={`${roboto.className} ${beVietnamPro.className}`}>
+      <Component {...pageProps} />
+    </div>
+  )
+}

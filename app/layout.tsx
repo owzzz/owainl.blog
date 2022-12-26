@@ -1,9 +1,8 @@
 import './globals.css';
 
-
 import Script from 'next/script';
 import Footer from './footer';
-import Header from './header';
+import MainNav from '../components/main-nav';
 
 export type ChildNode = {
   children: React.ReactNode
@@ -13,7 +12,7 @@ export default function Layout({ children }: ChildNode) {
   return (
     <html lang="en">
       <body className="flex flex-col h-screen">
-        <Header />
+        <MainNav />
         <main className='flex-1 flex items-center justify-center'>
           {children}
         </main>
