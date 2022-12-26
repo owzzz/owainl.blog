@@ -4,8 +4,7 @@ excerpt: 'Open sourcing my adventures. A place to learn, share and grow.'
 date: '2022-12-26T05:35:07.322Z'
 ---
 
-## Intro
-Hey, thanks for taking the time to check out my new personal site. This is day zero of what I hope will be a place to share interesting things I'm working on, a scratch-pad to work out ideas and general musings and a place to document and self-examen my life (for better or worse).
+Hey, thanks for taking the time to check out my new personal site. This is day zero of what I hope will be a place to share interesting things I'm working on, a scratch-pad for idea ideas, musings and a place to document and self-examen my life (for better or worse).
 
 ## A little about me
 I'm a Husband and Father to three girls. We are based in Austin Tx where I work as a Software Engineer at [Apple](https://apple.com). [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) and have built digital products and services for a variety of luxury brands and government organizations. In my spare time [I enjoy cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that blend great design with interesting engineering problems that solve real world problems.
