@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { beVietnamPro, roboto } from "../../lib/fonts";
 import { Post } from "../../lib/posts";
+import CopyLink from "../copy-link";
 import ShareLinkedin from "../share-linkedin";
 import ShareTwitter from "../share-twitter";
 
@@ -21,6 +22,7 @@ export default function Markdown({ post }: Props) {
                         <span className="text-sm text-gray-800">{readingTime(body)} min read</span>
                     </div>
                     <div className="flex items-center">
+                        <CopyLink />
                         <ShareTwitter post={post} />
                         <ShareLinkedin post={post} />
                     </div>
