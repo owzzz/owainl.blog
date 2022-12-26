@@ -15,5 +15,13 @@
 }
 
 .markdown p {
-  @apply text-base leading-relaxed;
+  @apply text-base leading-relaxed text-gray-800;
+}
+
+.markdown ul {
+  @apply list-inside list-disc;
+}
+
+.markdown a {
+  @apply underline;
 }

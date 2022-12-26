@@ -1,28 +1,22 @@
 ---
-title: 'Hello World'
-excerpt: 'Day 0 of a process as I outline my plans, musings and projects'
-date: '2022-12-23T05:35:07.322Z'
+title: 'Hello World...'
+excerpt: 'Open sourcing my adventures. A place to learn, share and grow.'
+date: '2022-12-26T05:35:07.322Z'
 ---
 
-# H1 Title
+## Intro
+Hey, thanks for taking the time to check out my new personal site. This is day zero of what I hope will be a place to share interesting things I'm working on, a scratch-pad to work out ideas and general musings and a place to document and self-examen my life (for better or worse).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## A little about me
+I'm a Husband and Father to three girls. We are based in Austin Tx where I work as a Software Engineer at [Apple](https://apple.com). [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) and have built digital products and services for a variety of luxury brands and government organizations. In my spare time [I enjoy cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that blend great design with interesting engineering problems that solve real world problems.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+In the coming weeks I will be working on building out the site and documenting the path as I go. Right now it's a bare bones [NextJs](https://nextjs.org) (V13) application but my plan is to roll out features on a weekly basis. Below are some of the immediate features I'd like to launch:
 
-## H2 Title
+- Tags
+- Authoring (Currently generated via markdown files)
+- [Prisma](https://prisma.io/) (ORM)
+- [PostgreSQL](https://www.postgresql.org/) Database
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. 
+But more on this in the coming weeks. Stay tuned.
 
-In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
-
-
-### H3 Title
-
-```
- Code Snippet
-```
-
-**Bold Text**
-
-A*cat*meow
+Owain
