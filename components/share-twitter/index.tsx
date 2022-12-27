@@ -11,7 +11,7 @@ function generateUrl({id, excerpt}: Post): string {
     const text = excerpt.length < CHAR_COUNT ? excerpt : `${excerpt.slice(0, (CHAR_COUNT - 3)) + '...'}`;
 
     // Query params
-    const _url = `https://${process.env['HOST']}/writing/${id}`;
+    const _url = `https://${process.env['HOST']}/about/${id}`;
     const _text = encodeURIComponent(text)
 
     // GA params

@@ -8,7 +8,7 @@ function generateUrl({id, title, excerpt }: Post): string {
     const linkedUrl = `https://www.linkedin.com/shareArticle`;
 
     // Query params
-    const _url = `https://${process.env['HOST']}/writing/${id}`;
+    const _url = `https://${process.env['HOST']}/about/${id}`;
     const _title = encodeURIComponent(title)
     const _summary = encodeURIComponent(excerpt);
 
