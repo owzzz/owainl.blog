@@ -1,6 +1,6 @@
 {
   "name": "owainl_site",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
+    "@sentry/nextjs": "^7.28.1",
     "eslint": "8.27.0",
     "eslint-config-next": "^13.1.1",
     "gray-matter": "^4.0.3",
