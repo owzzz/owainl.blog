@@ -15,6 +15,6 @@ export default async function Post({ params }: Props) {
 
   return <main className='max-w-[680px] w-full px-6 space-y-6'>
     <PostMeta post={post} />
-    <Markdown html={htmlFromMarkdown} />
+    <Markdown className="mb-4" html={htmlFromMarkdown} />
   </main>;
 }
