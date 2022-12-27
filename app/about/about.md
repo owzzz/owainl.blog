@@ -3,9 +3,9 @@ title: 'Hello World...'
 excerpt: 'Open sourcing my adventures. A place to learn, share and grow.'
 date: '2022-12-26T05:35:07.322Z'
 ---
-Hey, thanks for taking the time to check out my new personal site. 
+Hey, thanks for taking the time to check out my site. 
 
-**A little about me: ** I'm a Husband and Father to three girls. Originally from Wales in the UK, and now based in Austin Tx where I work as a Software Engineer at [Apple](https://apple.com). [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) across Europe and North America. I have worked on teams building digital products and services for a variety of luxury brands, tech companies and government organizations. In my spare time [I enjoy cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that blend great design with engineering to solve interesting real world problems.
+**A little about me:** I'm a Husband and Father to three girls. Originally from Wales in the UK, and now based in Austin Tx where I work as a Software Engineer at [Apple](https://apple.com). [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) across Europe and North America. I have worked on teams building digital products and services for a variety of luxury brands, tech companies and government organizations. In my spare time [I enjoy cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that blend great design with engineering to solve interesting real world problems.
 
 ## Why?
 This site is the launch of what I hope will be a place to share interesting things I'm musing on, a scratch-pad for ideas and a place to explore creative projects.
