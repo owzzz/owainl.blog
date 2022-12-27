@@ -29,5 +29,3 @@ Below are a few immediate tasks I'd like to explore.
 
 But more on this in the coming weeks. Stay tuned.
 
-Owain
-
