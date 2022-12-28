@@ -4,15 +4,21 @@ type Props = {
   post: Post
 }
 
-function generateUrl({id, excerpt = ''}: Post): string {
+function generateUrl({id, title, excerpt = ''}: Post): string {
     const CHAR_COUNT = 280;
     
     const twitterUrl = 'https://twitter.com/intent/tweet';
-    const text = excerpt.length < CHAR_COUNT ? excerpt : `${excerpt.slice(0, (CHAR_COUNT - 3)) + '...'}`;
+
+    if (excerpt.length > CHAR_COUNT) {
+        excerpt = excerpt.slice(0, (CHAR_COUNT - 3)) + '...';
+    }
+
+    // If there is no excerpt use title
+    const titleOrExcerpt = excerpt ?? title;
 
     // Query params
-    const _url = `https://${process.env['HOST']}/about/${id}`;
-    const _text = encodeURIComponent(text);
+    const _url = `https://${process.env['HOST']}/writing/${id}`;
+    const _text = encodeURIComponent(titleOrExcerpt);
 
     // GA params
     const _source = 'twitter';

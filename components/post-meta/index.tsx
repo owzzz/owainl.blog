@@ -8,13 +8,14 @@ type Props = {
   post: Post
 }
 
-export default function Markdown({ post }: Props) {
+export default function PostMeta({ post }: Props) {
     const {title, date, body} = post;
+
     return (
         <header className="space-y-6">
             <div>
                 <h1 className={`${beVietnamPro.variable} font-title text-4xl`}>{title}</h1>
-                <div className={`flex items-center justify-between py-2 px-4 bg-gray-100 rounded-md mt-6 ${roboto.variable} font-body`}>
+                <div className={`flex items-center justify-between p-2 md:px-4 bg-gray-100 rounded-md mt-6 ${roboto.variable} font-body`}>
                     <div className="space-x-4">
                         <span className="text-sm text-gray-800">{formatDate(date)}</span>
                         <span className="text-gray-500">|</span>
@@ -39,7 +40,7 @@ export function readingTime(text: string, wpm = 225): number {
 }
 
 export function formatDate(date: string): string {
-  const options = { dateStyle: 'long' } as Intl.DateTimeFormatOptions;
+  const options = { dateStyle: 'medium' } as Intl.DateTimeFormatOptions;
   const dateToFormat = new Date(date);
 
   return new Intl.DateTimeFormat('en-US', options).format(dateToFormat);
