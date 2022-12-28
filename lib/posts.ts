@@ -14,7 +14,7 @@ export type Post = {
     id: string,
     date: string,
     title: string,
-    excerpt: string,
+    excerpt?: string,
     body: string,
 }
 
