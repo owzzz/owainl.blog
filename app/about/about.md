@@ -12,14 +12,10 @@ In my spare time I enjoy hanging out with the family, [cycling with friends](htt
 ## What is this?
 I'm building this site as a place to store and share thoughts on topics I'm exploring, a scratch-pad for ideas and a place to explore creative projects. In the future I plan to build out the site and document the details I find interesting and that have been challenging in the hope it may provide value for others.
 
-This site is built on [NextJS](https://nextjs.org) and I've jumped in at [version 13 (Beta)](https://beta.nextjs.org/docs) release with no prior working experience of NextJS or it's ecosystem. At Apple I build tools in [EmberJS](https://emberjs.com)/[Symfony](https://symfony.com) and wanted an excuse to try a different stack. 
+At Apple I build tools in [EmberJS](https://emberjs.com)/[Symfony](https://symfony.com) and wanted an excuse to try a different stack and so I've opted for [NextJS](https://nextjs.org) [version 13 (Beta)](https://beta.nextjs.org/docs) for this site. Getting things setup has been straight forward and I've been impressed with their docs and in particular their build system [Vercel](https://vercel.com).
 
-So far NextJS has been relatively straight forward to get up and running and I've been particularly impressed with [Vercel](https://vercel.com) NextJS's build system with it's zero configuration and automated pipeline setup.
+If you're interested you can see progress by visiting my [Github release page](https://github.com/owzzz/owainl.blog/releases) or clicking on the version number at the bottom right of this site to see the latest release.
 
-Currently the site is using static markdown files to generate content which is great for some of the basic blogging functions but I'd like to start adding some more dynamic elements to the site and build it out organically.
-
-If you're interested you can follow along with my progress by visiting my github [release page](https://github.com/owzzz/owainl.blog/releases) or clicking on the version number at the bottom right of this site to see the latest release. I plan on adding a road map so that I can document and track progress.
-
-To see some of the features I'm tracking you can visit my [tracked issues](https://github.com/owzzz/owainl.blog/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+Features are being tracked via [Github issues](https://github.com/owzzz/owainl.blog/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
 Thanks again for stopping by and feel free to [reach out](mailto:owain@owainl.co?subject=Website%20enquiry) if you'd like to connect.
