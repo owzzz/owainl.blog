@@ -17,7 +17,7 @@ function generateUrl({id, title, excerpt }: Post): string {
     const _medium = 'blog-post';
     const _id = `${id}`;
         
-    return `${linkedUrl}?url=${_url}&title=${title}&summary=${_summary}&source=${process.env['HOST']}&utm_source=${_source}&utm_medium=${_medium}&utm_id=${_id}`;
+    return `${linkedUrl}?url=${_url}&title=${_title}&summary=${_summary}&source=${process.env['HOST']}&utm_source=${_source}&utm_medium=${_medium}&utm_id=${_id}`;
 }
 
 export default function ShareLinkedin({ post }: Props) {

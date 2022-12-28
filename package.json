@@ -6,14 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint --fix . --ext .ts,.tsx"
   },
   "dependencies": {
     "@next/font": "^13.1.1",
     "@sentry/nextjs": "^7.28.1",
     "eslint": "8.27.0",
     "eslint-config-next": "^13.1.1",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "gray-matter": "^4.0.3",
     "next": "^13.1.1",
     "react": "^18.2.0",

@@ -1,4 +1,4 @@
-import Meta from "../components/document/meta";
+import Meta from '../components/document/meta';
 
 export default function Head() {
   return (

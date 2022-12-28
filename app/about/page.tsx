@@ -13,8 +13,7 @@ type Page = {
 
 const currentDirectory = path.join(process.cwd(), 'app/about');
 
-
-export default async function Page() {
+export default async function About() {
   const page = getPage('about');
 
   const htmlFromMarkdown = await markdownToHtml(page.body);

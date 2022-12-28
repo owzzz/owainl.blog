@@ -1,4 +1,4 @@
-import VersionLink from "../components/version-link";
+import VersionLink from '../components/version-link';
 
 export default function Footer() {
   return (
