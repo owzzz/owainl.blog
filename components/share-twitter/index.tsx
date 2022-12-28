@@ -4,11 +4,11 @@ type Props = {
   post: Post
 }
 
-function generateUrl({id, excerpt}: Post): string {
+function generateUrl({id, excerpt = ''}: Post): string {
     const CHAR_COUNT = 280;
     
     const twitterUrl = 'https://twitter.com/intent/tweet';
-    const text = excerpt?.length < CHAR_COUNT ? excerpt : `${excerpt?.slice(0, (CHAR_COUNT - 3)) + '...'}`;
+    const text = excerpt.length < CHAR_COUNT ? excerpt : `${excerpt.slice(0, (CHAR_COUNT - 3)) + '...'}`;
 
     // Query params
     const _url = `https://${process.env['HOST']}/about/${id}`;

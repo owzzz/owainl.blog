@@ -4,7 +4,7 @@ type Props = {
   post: Post
 }
 
-function generateUrl({id, title, excerpt }: Post): string {    
+function generateUrl({id, title, excerpt = ''}: Post): string {    
     const linkedUrl = 'https://www.linkedin.com/shareArticle';
 
     // Query params
