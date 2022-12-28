@@ -39,7 +39,7 @@ export function readingTime(text: string, wpm = 225): number {
 }
 
 export function formatDate(date: string): string {
-  const options = { dateStyle: 'full' } as Intl.DateTimeFormatOptions;
+  const options = { dateStyle: 'long' } as Intl.DateTimeFormatOptions;
   const dateToFormat = new Date(date);
 
   return new Intl.DateTimeFormat('en-US', options).format(dateToFormat);
