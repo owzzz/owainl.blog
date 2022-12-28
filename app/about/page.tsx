@@ -21,10 +21,10 @@ export default async function About() {
 
   return <main className='max-w-[680px] w-full px-6 space-y-6 pb-6'>
     <header className='border-b border-gray-100'>
-      <span className='inline-block text-gray-400 font-semibold uppercase text-xs'>About</span>
+      <span className='inline-block text-gray-500 font-semibold uppercase text-xs'>About</span>
       <h1 className={`${beVietnamPro.variable} font-title text-4xl`}>{page.title}</h1>
       <div className='flex items-center justify-between pt-4 pb-4'>
-        <p className={`${roboto.variable} font-body text-xs text-gray-400`}>Last updated: {formatDate(page.date)}</p>
+        <p className={`${roboto.variable} font-body text-sm text-gray-500`}>Last updated: {formatDate(page.date)}</p>
         <CopyLink />
       </div>
       
