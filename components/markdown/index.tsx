@@ -9,5 +9,5 @@ type Props = {
 export default function Markdown({ html, className }: Props) {
   return (
     <div className={`${className} ${styles.markdown} ${roboto.variable} font-body`} dangerouslySetInnerHTML={{ __html: html }} />
-  )
+  );
 }

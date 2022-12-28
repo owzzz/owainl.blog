@@ -1,8 +1,8 @@
 import './globals.css';
-
 import Script from 'next/script';
 import Footer from './footer';
 import MainNav from '../components/main-nav';
+import React from 'react';
 
 export type ChildNode = {
   children: React.ReactNode

@@ -1,9 +1,8 @@
-import Link from "next/link";
-import { beVietnamPro, roboto } from "../../lib/fonts";
-import { Post } from "../../lib/posts";
-import CopyLink from "../copy-link";
-import ShareLinkedin from "../share-linkedin";
-import ShareTwitter from "../share-twitter";
+import { beVietnamPro, roboto } from '../../lib/fonts';
+import { Post } from '../../lib/posts';
+import CopyLink from '../copy-link';
+import ShareLinkedin from '../share-linkedin';
+import ShareTwitter from '../share-twitter';
 
 type Props = {
   post: Post
@@ -29,7 +28,7 @@ export default function Markdown({ post }: Props) {
                 </div>
             </div>
         </header>
-    )
+    );
 }
 
 export function readingTime(text: string, wpm = 225): number {
@@ -43,5 +42,5 @@ export function formatDate(date: string): string {
   const options = { month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions;
   const dateToFormat = new Date(date);
 
-  return new Intl.DateTimeFormat('en-US', options).format(dateToFormat)
+  return new Intl.DateTimeFormat('en-US', options).format(dateToFormat);
 }

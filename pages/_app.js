@@ -5,5 +5,5 @@ export default function MyApp({ Component, pageProps }) {
     <div className={`${roboto.className} ${beVietnamPro.className}`}>
       <Component {...pageProps} />
     </div>
-  )
+  );
 }
