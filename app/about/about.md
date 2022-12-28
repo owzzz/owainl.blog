@@ -1,18 +1,16 @@
 ---
-title: 'Hello World...'
-excerpt: 'Open sourcing my adventures. A place to learn, share and grow.'
-date: '2022-12-26T05:35:07.322Z'
+title: "Hey, I'm Owain Llewellyn, a Software Engineer and Designer based in Austin, TX."
+date: "2022-12-28T12:35:07.322Z"
 ---
 
-## A little about me 
-Hey, thanks for taking the time to check out my site. I'm an Austin Tx based Software Engineer at [Apple](https://apple.com). [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) across Europe and North America working on digital products and services for a variety of luxury brands, tech companies and government organizations. 
+Thanks for taking the time to check out my site. [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) across Europe and North America working on digital products and services for a variety of luxury brands, tech companies and government organizations. Today I work at [Apple](https://apple.com) designing and building internal tools.
 
-I'm originally from Wales in the UK and my [wife](https://www.selostudios.com/about) and I are raising two girls in the US.
+I'm originally from Wales in the UK and my [wife](https://www.selostudios.com/about) and we are raising two girls in the US.
 
 In my spare time I enjoy hanging out with the family, [cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that incorporate great design with engineering to solve interesting problems.
 
 ## What is this?
-I'm building this site as a place to store and share thoughts, topics I'm exploring, a scratch-pad for ideas and a place to explore creative projects. In the future I plan to build out the site and document the details I find interesting and that have been challenging in the hope it may provide value for others.
+I'm building this site as a place to store and share thoughts on topics I'm exploring, a scratch-pad for ideas and a place to explore creative projects. In the future I plan to build out the site and document the details I find interesting and that have been challenging in the hope it may provide value for others.
 
 This site is built on [NextJS](https://nextjs.org) and I've jumped in at [version 13 (Beta)](https://beta.nextjs.org/docs) release with no prior working experience of NextJS or it's ecosystem. At Apple I build tools in [EmberJS](https://emberjs.com)/[Symfony](https://symfony.com) and wanted an excuse to try a different stack. 
 
