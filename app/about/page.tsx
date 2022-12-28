@@ -22,7 +22,7 @@ export default async function About() {
     <header className='border-b border-gray-100'>
       <span className='inline-block text-gray-400 font-semibold uppercase text-xs'>About</span>
       <h1 className={`${beVietnamPro.variable} font-title text-4xl`}>{page.title}</h1>
-      <p className={`${roboto.variable} font-body text-xs pb-4 pt-2 text-gray-400`}>Last updated: <span className='font-semibold'>{formatDate(page.date)}</span></p>
+      <p className={`${roboto.variable} font-body text-xs py-4 text-gray-400`}>Last updated: {formatDate(page.date)}</p>
     </header>
     <Markdown html={htmlFromMarkdown} />
   </main>;

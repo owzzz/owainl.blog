@@ -5,7 +5,7 @@ date: "2022-12-28T12:35:07.322Z"
 
 Thanks for taking the time to check out my site. [I have been working in the tech industry for >15 years](https://www.linkedin.com/in/owainllewellyn) across Europe and North America working on digital products and services for a variety of luxury brands, tech companies and government organizations. Today I work at [Apple](https://apple.com) designing and building internal tools.
 
-I'm originally from Wales in the UK and my [wife](https://www.selostudios.com/about) and we are raising two girls in the US.
+Originally from Wales in the UK, I have been in the states for nearly 10 years, raising two young girls with my [wife](https://www.selostudios.com/about).
 
 In my spare time I enjoy hanging out with the family, [cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that incorporate great design with engineering to solve interesting problems.
 
