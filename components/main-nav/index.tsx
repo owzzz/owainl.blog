@@ -9,6 +9,7 @@ export default function MainNav() {
                 <Link className="text-sm text-black tracking-wide" href="/">OWAINL.co</Link>
                 <ul className='flex space-x-8'>
                     <li><Link className={`text-xs hover:underline ${usePathname()?.includes('about') ? 'underline font-bold' : ''}`} href="/about">About</Link></li>
+                    {/* <li><Link className={`text-xs hover:underline ${usePathname()?.includes('writing') ? 'underline font-bold' : ''}`} href="/writing/hello-world">Writing</Link></li> */}
                     <li><Link className="text-xs hover:underline" href="mailto:owain@owainl.co?subject=Website%20enquiry">Contact</Link></li>
                 </ul>
             </div>
