@@ -15,7 +15,7 @@ export default function Page() {
         </p>
         
         <div className='flex mt-2 items-center text-gray-500'>
-          <p className={`${roboto.variable} font-body`}>Building Things At</p> 
+          <p className={`${roboto.variable} font-body`}>Building Software At</p> 
           <Image src="/apple.svg" className="ml-2 relative bottom-0.5" alt="Apple Logo" width={20} height={20} />
         </div>
 
