@@ -4,9 +4,9 @@ date: "2022-12-28T12:35:07.322Z"
 metaTitle: "Writing - Hello World, Owain Llewellyn launches personal website covering topics engineering, technology, environment, lifestyle"
 ---
 
-**Hey, thanks for stopping by:** This is my new personal website, one that I've been meaning to start for some time. It'll serve as a place for documenting ideas and experimenting on personal projects. A digital scratch pad that I can use to explore tech and things that I find of interest.
+**Hey, thanks for stopping by:** This is my new personal website, one that I've been meaning to start for some time. I hope it'll serve as a place for documenting ideas and experimenting on personal projects. A digital scratch pad that I can use to explore new tech and things that peak my interest.
 
-The site will serve as a jump off point to experiment with software from scratch, trying out, adapting and tearing down whilst sharing what I've learnt along the way. Working this way I hope will allow me to create at a moments notice and without friction.
+The site will serve as a jump off point to experiment with software from scratch, trying out, adapting and tearing down whilst sharing what I've learnt along the way. This approach I hope will allow me to create at a moments notice and without friction.
 
 **A little bit about the build:** The site is being developed from the ground up using NextJS [NextJS](https://nextjs.org) [version 13 (Beta)](https://beta.nextjs.org/docs). Getting everything setup to this point has been straight forward so far and I've been impressed with their docs and in particular their build system [Vercel](https://vercel.com).
 
