@@ -1,7 +1,7 @@
 ---
 title: "Hello World."
 date: "2022-12-28T12:35:07.322Z"
-metaTitle: "Writing - Hello World, Owain Llewellyn launches personal website covering topics engineering, technology, environment, lifestyle"
+metaTitle: "Writing - Hello World, The personal website of Owain Llewellyn"
 ---
 
 **Hey, thanks for stopping by:** This is my new personal website, one that I've been meaning to start for some time. I hope it'll serve as a place for documenting ideas and experimenting on personal projects. A digital scratch pad that I can use to explore new tech and things that peak my interest.
