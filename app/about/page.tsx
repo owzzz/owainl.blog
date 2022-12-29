@@ -20,7 +20,7 @@ export default async function About() {
   const htmlFromMarkdown = await markdownToHtml(page.body);
 
   return (
-    <main className='max-w-[680px] w-full px-6 space-y-6 pb-6 top-[30vh] relative'>
+    <main className='max-w-[680px] w-full px-6 space-y-6 pb-6 mt-4 md:mt-8'>
       <header className='border-b border-gray-100'>
         <span className='inline-block text-gray-400 font-semibold uppercase text-xs mb-4 md:mb-8'>About</span>
         <h1 className={`${beVietnamPro.variable} font-title text-3xl md:text-4xl`}>{page.title}</h1>
