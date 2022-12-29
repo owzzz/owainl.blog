@@ -11,9 +11,9 @@ export type ChildNode = {
 export default function Layout({ children }: ChildNode) {
   return (
     <html lang="en">
-      <body className="flex flex-col h-screen">
+      <body className="flex flex-col items-center h-screen">
         <MainNav />
-        <main className='flex-1 flex items-center justify-center max-w-[680px] w-full px-6 space-y-6 pb-6 mt-4 md:mt-8'>
+        <main className='flex-1 flex flex-col items-center justify-center max-w-[680px] w-full px-6 space-y-6 pb-6 mt-4 md:mt-8'>
           {children}
         </main>
         <Footer />

@@ -1,6 +1,6 @@
 import markdownToHtml from '../../../lib/markdown-to-html';
 import { getPost } from '../../../lib/posts';
-import PostMeta from '../../../components/post-meta';
+import PageMeta from '../../../components/page-meta';
 import Markdown from '../../../components/markdown';
 
 type Props = {
@@ -15,7 +15,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <>
-        <PostMeta post={post} />
+        <PageMeta post={post} />
         <Markdown html={htmlFromMarkdown} />
     </>
   );

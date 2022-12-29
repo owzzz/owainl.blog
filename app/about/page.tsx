@@ -4,7 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { beVietnamPro, roboto } from '../../lib/fonts';
-import { formatDate } from '../../components/post-meta';
+import { formatDate } from '../../components/page-meta';
 import CopyLink from '../../components/copy-link';
 
 type Page = {

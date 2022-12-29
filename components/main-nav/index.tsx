@@ -1,10 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { roboto } from '../../lib/fonts';
 import { usePathname } from 'next/navigation';
 
 export default function MainNav() {
     return (
-        <header className={`${roboto.variable} font-title flex items-center justify-center bg-white px-6 md:px-4 h-[60px] flex-none`}>
+        <header className={`${roboto.variable} font-title flex items-center justify-center bg-white px-6 md:px-4 h-[60px] flex-none w-full`}>
             <div className="flex items-center justify-between max-w-6xl w-full">
                 <Link className="text-sm text-black tracking-wide" href="/">OWAINL.co</Link>
                 <ul className='flex space-x-8'>
