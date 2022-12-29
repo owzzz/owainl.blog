@@ -4,9 +4,9 @@ date: "2022-12-28T12:35:07.322Z"
 metaTitle: "Writing - Hello World, Owain Llewellyn launches personal website covering topics engineering, technology, environment, lifestyle"
 ---
 
-**Hey, thanks for stopping by:** This is a new project, one that I've been meaning to start for some time. This site represents a digital scratch pad for ideas. A place to document thoughts around areas of interest (Technology, Environment, Lifestyle and perhaps some of my hobbies) and an opportunity to do some self reflection and go where curiosity takes me.
+**Hey, thanks for stopping by:** This is my new personal website, one that I've been meaning to start for some time. It'll serve as a place for documenting ideas and experimenting on personal projects. A digital scratch pad that I can use to explore tech and things that I find of interest.
 
-I wanted something I could build from the ground up, try out, adapt and teardown. Having the ability to work on something at a moments notice and with little friction.
+It was important that the site was custom so that I could use it as a jump off point to experiment with software from scratch, trying out, adapting and tearing down whilst sharing what I've learnt along the way. Working from custom allows me to create something at a moments notice and with little friction.
 
 I hope to add features here when time permits. I'll also try to summarize and share some of those learnings as I go. But mainly it's a place where I can try something out, get feedback and keep moving forward. All feedback welcome.
 

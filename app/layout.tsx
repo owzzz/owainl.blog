@@ -17,6 +17,7 @@ export default function Layout({ children }: ChildNode) {
         <main className='flex-1 flex flex-col items-center justify-center w-full px-6 space-y-6 pb-6 mt-4 md:mt-8'>
           {children}
         </main>
+        
         <Footer />
 
         <Script
