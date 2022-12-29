@@ -16,6 +16,7 @@ export type Post = {
     title: string,
     excerpt?: string,
     body: string,
+    metaTitle?: string;
 }
 
 export function getAllPosts(): Post[] {

@@ -14,12 +14,13 @@ export default function PostMeta({ post }: Props) {
 
     return (
         <header className="w-full space-y-6 border-b border-gray-200 mb-6">
+            <span className='inline-block text-gray-400 font-semibold uppercase text-xs mb-4 md:mb-8'>Writing_</span>
             <h1 className={`${beVietnamPro.variable} font-title text-3xl md:text-4xl`}>{title}</h1>
             <div className={`flex items-center justify-between pt-4 pb-4 mt-6 ${roboto.variable} font-body`}>
                 <div className="space-x-4">
-                    <span className="text-sm text-gray-800">{formatDate(date)}</span>
+                    <span className={`${roboto.variable} font-body text-sm text-gray-500`}><span className='hidden md:inline-block'>Last updated:</span> {formatDate(date)}</span>
                     <span className="text-gray-200">|</span>
-                    <span className="text-sm text-gray-800">{readingTime(body)} min read</span>
+                    <span className="text-sm text-gray-500">{readingTime(body)} min read</span>
                 </div>
                 <div className="flex items-center">
                     <CopyLink />

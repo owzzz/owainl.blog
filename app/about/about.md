@@ -1,5 +1,6 @@
 ---
 title: "Hey, I'm Owain Llewellyn, a Software Engineer and Designer based in Austin, TX."
+metaTitle: "About Me - Owain LLewellyn, a Software Engineer and Designer based in Austin, TX"
 date: "2022-12-28T12:35:07.322Z"
 ---
 

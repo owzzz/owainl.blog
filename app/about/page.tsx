@@ -7,26 +7,28 @@ import PageMeta from '../../components/page-meta';
 
 
 export type Page = {
+  title: string;
   body: string;
-  [key: string]: any;
+  date: string;
+  metaTitle?: string;
 }
 
 const currentDirectory = path.join(process.cwd(), 'app/about');
 
 export default async function About() {
-  const page = getPage('about');
+  const {body, title, date } = getPage();
 
-  const htmlFromMarkdown = await markdownToHtml(page.body);
+  const htmlFromMarkdown = await markdownToHtml(body);
 
   return (
     <section className='w-full max-w-[640px]'>
-      <PageMeta title={page.title} date={page.date} />
+      <PageMeta title={title} date={date} />
       <Markdown html={htmlFromMarkdown} />
     </section>
   );
 }
 
-function getPage(fileName: string) {
+export function getPage(fileName = 'about') {
   const fullPath = path.join(currentDirectory, `${fileName}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 

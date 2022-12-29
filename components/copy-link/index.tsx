@@ -5,7 +5,7 @@ async function copyToClipboard(): Promise<void> {
     try {
         await navigator.clipboard.writeText(currentUrl);
     } catch(err) {
-        throw Error('Error copying to clipboard');
+        throw new Error('Copy Link / Copy to clipboard / Error copying to clipboard');
     }
 }
 
