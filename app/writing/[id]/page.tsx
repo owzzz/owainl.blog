@@ -13,8 +13,10 @@ export default async function Post({ params }: Props) {
 
   const htmlFromMarkdown = await markdownToHtml(post.body);
 
-  return <main className='max-w-[680px] w-full px-6 space-y-6 pb-6'>
-    <PostMeta post={post} />
-    <Markdown html={htmlFromMarkdown} />
-  </main>;
+  return (
+    <>
+        <PostMeta post={post} />
+        <Markdown html={htmlFromMarkdown} />
+    </>
+  );
 }
