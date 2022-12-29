@@ -19,18 +19,20 @@ export default async function About() {
 
   const htmlFromMarkdown = await markdownToHtml(page.body);
 
-  return <main className='max-w-[680px] w-full px-6 space-y-6 pb-6'>
-    <header className='border-b border-gray-100'>
-      <span className='inline-block text-gray-500 font-semibold uppercase text-xs'>About</span>
-      <h1 className={`${beVietnamPro.variable} font-title text-3xl md:text-4xl`}>{page.title}</h1>
-      <div className='flex items-center justify-between pt-4 pb-4'>
-        <p className={`${roboto.variable} font-body text-sm text-gray-500`}>Last updated: {formatDate(page.date)}</p>
-        <CopyLink />
-      </div>
-      
-    </header>
-    <Markdown html={htmlFromMarkdown} />
-  </main>;
+  return (
+    <main className='max-w-[680px] w-full px-6 space-y-6 pb-6 top-[30vh] relative'>
+      <header className='border-b border-gray-100'>
+        <span className='inline-block text-gray-400 font-semibold uppercase text-xs mb-4 md:mb-8'>About</span>
+        <h1 className={`${beVietnamPro.variable} font-title text-3xl md:text-4xl`}>{page.title}</h1>
+        <div className='flex items-center justify-between pt-4 pb-4'>
+          <p className={`${roboto.variable} font-body text-sm text-gray-500`}>Last updated: {formatDate(page.date)}</p>
+          <CopyLink />
+        </div>
+        
+      </header>
+      <Markdown html={htmlFromMarkdown} />
+    </main>
+  );
 }
 
 function getPage(fileName: string) {
