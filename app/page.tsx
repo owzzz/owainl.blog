@@ -5,7 +5,7 @@ import { roboto, beVietnamPro } from '../lib/fonts';
 export default function Page() {
   return (
     <section className="flex justify-center items-center w-full max-w-[1220px] flex-1">
-      <div className="px-6 md:px-4">
+      <div className="px-4">
         <h1 className={`${beVietnamPro.variable} font-title text-2xl md:text-3xl tracking-wide leading-normal`}>Owain Llewellyn<br />
           <span className="text-3xl md:text-5xl mt-2 block">Software Engineer &amp; Designer<span className="animate-blink">_</span></span>
         </h1>
