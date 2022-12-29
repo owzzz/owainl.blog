@@ -14,9 +14,9 @@ export default async function Post({ params }: Props) {
   const htmlFromMarkdown = await markdownToHtml(post.body);
 
   return (
-    <>
+    <section className='w-full max-w-[640px]'>
         <PageMeta post={post} />
         <Markdown html={htmlFromMarkdown} />
-    </>
+    </section>
   );
 }
