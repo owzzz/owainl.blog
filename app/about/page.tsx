@@ -3,11 +3,10 @@ import Markdown from '../../components/markdown';
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { beVietnamPro, roboto } from '../../lib/fonts';
-import { formatDate } from '../../components/page-meta';
-import CopyLink from '../../components/copy-link';
+import PageMeta from '../../components/page-meta';
 
-type Page = {
+
+export type Page = {
   body: string;
   [key: string]: any;
 }
@@ -21,14 +20,7 @@ export default async function About() {
 
   return (
     <section className='w-full max-w-[640px]'>
-      <header className='border-b border-gray-200 mb-6'>
-        <span className='inline-block text-gray-400 font-semibold uppercase text-xs mb-4 md:mb-8'>About</span>
-        <h1 className={`${beVietnamPro.variable} font-title text-3xl md:text-4xl leading-loose`}>{page.title}</h1>
-        <div className='flex items-center justify-between pt-4 pb-4'>
-          <p className={`${roboto.variable} font-body text-sm text-gray-500`}>Last updated: {formatDate(page.date)}</p>
-          <CopyLink />
-        </div>
-      </header>
+      <PageMeta title={page.title} date={page.date} />
       <Markdown html={htmlFromMarkdown} />
     </section>
   );
