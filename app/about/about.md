@@ -10,6 +10,6 @@ Originally from Wales in the UK, I have been in the states for nearly 10 years, 
 
 In my spare time I enjoy hanging out with the family, [cycling with friends](https://breakfastclubatx.com), making cocktails, [cooking outside](https://us.gozney.com) and working on projects that incorporate great design with engineering to solve interesting problems.
 
-Thanks for stopping by...
-
 If you'd like to connect please [reach out](mailto:owain@owainl.co?subject=Website%20enquiry).
+
+Thanks for stopping by...
