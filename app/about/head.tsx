@@ -1,17 +1,18 @@
 import Meta from '../../components/document/meta';
-import { getPage } from './page';
+import { Page } from '../../lib/pages';
+import prisma from '../../lib/prisma';
 
-export default function Head() {
-    const { metaTitle } = getPage();
-
-    if (!metaTitle) {
-        throw new Error('About / Head / meta title not defined');
-    }
+export default async function Head() {
+    const page = await prisma.page.findUnique({
+      where: {
+        id: 1, // TODO: Make this Dynamic
+      }
+    }) as Page | null;
 
     return (
     <>
         <Meta />
-        <title>{metaTitle}</title>
+        <title>{`${page?.slug} - ${page?.title}`}</title>
     </>
     );
 }

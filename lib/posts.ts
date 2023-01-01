@@ -12,11 +12,12 @@ export type Path = {
 
 export type Post = {
     id: string,
-    date: string,
     title: string,
     excerpt?: string,
-    body: string,
-    metaTitle?: string;
+    content: string,
+    createdAt: string,
+    published: boolean,
+    slug: string;
 }
 
 export function getAllPosts(): Post[] {
@@ -39,27 +40,34 @@ export function getAllPosts(): Post[] {
       ...matterResult.data,
     } as Post;
   });
-  // Sort posts by date
-  return allPosts.sort((a: Post, b: Post) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
+  // Filter by Sort posts by date
+  return allPosts
+    .filter((post) => Boolean(post.published) === true)
+    .sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
   });
 }
 
-export function getPost(id: string): Post {
+export function getPost(id: string): Post | null {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
+  const isPublished = Boolean(matterResult.data.published);
+
+  if (!isPublished) {
+    return null;
+  }
 
   // Combine the data with the id
   return {
     id,
-    body: matterResult.content,
+    content: matterResult.content,
     ...matterResult.data,
   } as Post;
 }
