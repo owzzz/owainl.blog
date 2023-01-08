@@ -1,31 +1,23 @@
-import { Post } from '../../lib/posts';
+import { Post } from '@prisma/client';
 
 type Props = {
   post: Post
 }
 
-function generateUrl({id, title, excerpt = ''}: Post): string {
-    const CHAR_COUNT = 280;
-    
+function generateUrl(post: Post): string {
+    const { title, slug } = post;
     const twitterUrl = 'https://twitter.com/intent/tweet';
 
-    if (excerpt.length > CHAR_COUNT) {
-        excerpt = excerpt.slice(0, (CHAR_COUNT - 3)) + '...';
-    }
-
-    // If there is no excerpt use title
-    const titleOrExcerpt = excerpt ?? title;
-
     // Query params
-    const _url = `https://${process.env['HOST']}/writing/${id}`;
-    const _text = encodeURIComponent(titleOrExcerpt);
+    const _url = `https://${process.env['HOST']}/writing/${slug}`;
+    const _text = encodeURIComponent(title);
 
     // GA params
     const _source = 'twitter';
     const _medium = 'blog-post';
-    const _id = `${id}`;
+    const _slug = `${slug}`;
         
-    return `${twitterUrl}?url=${_url}&text=${_text}&utm_source=${_source}&utm_medium=${_medium}&utm_id=${_id}`;
+    return `${twitterUrl}?url=${_url}&text=${_text}&utm_source=${_source}&utm_medium=${_medium}&utm_id=${_slug}`;
 }
 
 export default function ShareTwitter({ post }: Props) {

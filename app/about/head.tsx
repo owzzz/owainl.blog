@@ -1,17 +1,13 @@
 import Meta from '../../components/document/meta';
-import { getPage } from './page';
+import { findUniquePageBySlug } from '../../lib/pages';
 
-export default function Head() {
-    const { metaTitle } = getPage();
-
-    if (!metaTitle) {
-        throw new Error('About / Head / meta title not defined');
-    }
+export default async function Head() {
+    const page = await findUniquePageBySlug('about');
 
     return (
     <>
         <Meta />
-        <title>{metaTitle}</title>
+        {page ? (<title>{`${page?.title} - (${page?.slug})`}</title>) : null }
     </>
     );
 }

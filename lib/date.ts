@@ -1,4 +1,4 @@
-export function formatDate(date: string): string {
+export function formatDate(date: Date): string {
   const options = { dateStyle: 'medium' } as Intl.DateTimeFormatOptions;
   const dateToFormat = new Date(date);
 
