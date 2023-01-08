@@ -3,16 +3,10 @@ import Markdown from '../../components/markdown';
 import PageMeta from '../../components/page-meta';
 import Link from 'next/link';
 import { beVietnamPro } from '../../lib/fonts';
-import prisma from '../../lib/prisma';
-import { Page } from '../../lib/pages';
-import { Prisma } from '@prisma/client';
+import { findUniquePageBySlug } from '../../lib/pages';
 
 export default async function About() {
-  const page = await prisma.page.findUnique({
-    where: {
-      slug: 'about'
-    } as Prisma.PageWhereUniqueInput
-  }) as Page | null;
+  const page = await findUniquePageBySlug('about');
 
   if (!page) {
     return (
@@ -23,12 +17,12 @@ export default async function About() {
     );
   }
 
-  const htmlFromMarkdown = await markdownToHtml(page.content);
-
   return (
     <section className='w-full max-w-[640px]'>
       <PageMeta page={page} />
-      <Markdown html={htmlFromMarkdown} />
+      { page.content ? (
+           <Markdown html={await markdownToHtml(page.content)} />
+        ) : null}
     </section>
   );
 }

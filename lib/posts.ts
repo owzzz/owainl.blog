@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { Prisma, Post } from '@prisma/client';
+import prisma from './prisma';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -10,8 +13,8 @@ export type Path = {
   }
 }
 
-export type Post = {
-    id: string,
+export type StaticPost = {
+    id: number,
     title: string,
     excerpt?: string,
     content: string,
@@ -20,7 +23,7 @@ export type Post = {
     slug: string;
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts(): StaticPost[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPosts = fileNames.map((fileName) => {
@@ -36,14 +39,14 @@ export function getAllPosts(): Post[] {
 
     // Combine the data with the id
     return {
-      id,
+      id: Number(id),
       ...matterResult.data,
-    } as Post;
+    } as StaticPost;
   });
   // Filter by Sort posts by date
   return allPosts
     .filter((post) => Boolean(post.published) === true)
-    .sort((a: Post, b: Post) => {
+    .sort((a: StaticPost, b: StaticPost) => {
       if (a.createdAt < b.createdAt) {
         return 1;
       } else {
@@ -66,8 +69,18 @@ export function getPost(id: string): Post | null {
 
   // Combine the data with the id
   return {
-    id,
+    id: Number(id),
     content: matterResult.content,
     ...matterResult.data,
   } as Post;
+}
+
+export async function findUniquePostBySlug(slug: string): Promise<Post | null> {
+  const post = await prisma.post.findUnique({
+    where: {
+      slug,
+    } as Prisma.PostWhereUniqueInput
+  });
+
+  return post;
 }

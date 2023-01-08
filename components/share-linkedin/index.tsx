@@ -1,23 +1,24 @@
-import { Post } from '../../lib/posts';
+import { Post } from '@prisma/client';
 
 type Props = {
   post: Post
 }
 
-function generateUrl({id, title, excerpt = ''}: Post): string {    
+function generateUrl(post: Post): string {   
+    const { title, content, slug} = post; 
     const linkedUrl = 'https://www.linkedin.com/shareArticle';
 
     // Query params
-    const _url = `https://${process.env['HOST']}/about/${id}`;
+    const _url = `https://${process.env['HOST']}/about/${slug}`;
     const _title = encodeURIComponent(title);
-    const _summary = encodeURIComponent(excerpt);
+    const _summary = encodeURIComponent(content ?? '');
 
     // GA params
     const _source = 'linkedin';
     const _medium = 'blog-post';
-    const _id = `${id}`;
+    const _slug = `${slug}`;
         
-    return `${linkedUrl}?url=${_url}&title=${_title}&summary=${_summary}&source=${process.env['HOST']}&utm_source=${_source}&utm_medium=${_medium}&utm_id=${_id}`;
+    return `${linkedUrl}?url=${_url}&title=${_title}&summary=${_summary}&source=${process.env['HOST']}&utm_source=${_source}&utm_medium=${_medium}&utm_id=${_slug}`;
 }
 
 export default function ShareLinkedin({ post }: Props) {

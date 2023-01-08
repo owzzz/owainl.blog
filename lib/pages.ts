@@ -1,8 +1,10 @@
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { Page, Prisma } from '@prisma/client';
+import prisma from './prisma';
 
-export type Page = {
+export type StaticPage = {
   title: string,
   excerpt?: string,
   content: string,
@@ -31,5 +33,15 @@ export function getPage(fileName?: string) {
   return {
     content: matterResult.content,
     ...matterResult.data,
-  } as Page;
+  } as StaticPage;
+}
+
+export async function findUniquePageBySlug(slug: string): Promise<Page | null> {
+  const page = await prisma.page.findUnique({
+    where: {
+      slug,
+    } as Prisma.PageWhereUniqueInput
+  });
+
+  return page;
 }

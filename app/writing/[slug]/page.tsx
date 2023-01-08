@@ -1,11 +1,9 @@
 import markdownToHtml from '../../../lib/markdown-to-html';
-import { Post } from '../../../lib/posts';
+import { findUniquePostBySlug } from '../../../lib/posts';
 import PostMeta from '../../../components/post-meta';
 import Markdown from '../../../components/markdown';
 import { beVietnamPro } from '../../../lib/fonts';
 import Link from 'next/link';
-import prisma from '../../../lib/prisma';
-import { Prisma } from '@prisma/client';
 
 type Params = {
   params: {
@@ -14,11 +12,7 @@ type Params = {
 }
 
 export default async function _Post({ params }: Params) {
-  const post = await prisma.post.findUnique({
-    where: {
-      slug: params.slug,
-    } as Prisma.PageWhereUniqueInput
-  }) as Post | null;
+  const post = await findUniquePostBySlug(params.slug);
 
   if (!post) {
     return (
@@ -29,12 +23,12 @@ export default async function _Post({ params }: Params) {
     );
   }
 
-  const htmlFromMarkdown = await markdownToHtml(post.content);
-
   return (
     <section className='w-full max-w-[640px]'>
         <PostMeta post={post} />
-        <Markdown html={htmlFromMarkdown} />
+        { post.content ? (
+           <Markdown html={await markdownToHtml(post.content)} />
+        ) : null}
     </section>
   );
 }
