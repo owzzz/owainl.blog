@@ -1,6 +1,6 @@
+import { Page } from '@prisma/client';
 import { formatDate } from '../../lib/date';
 import { beVietnamPro, roboto } from '../../lib/fonts';
-import { Page } from '../../lib/pages';
 import CopyLink from '../copy-link';
 
 type Props = {

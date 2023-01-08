@@ -1,6 +1,6 @@
+import { Post } from '@prisma/client';
 import { formatDate } from '../../lib/date';
 import { beVietnamPro, roboto } from '../../lib/fonts';
-import { Post } from '../../lib/posts';
 import CopyLink from '../copy-link';
 import ShareLinkedin from '../share-linkedin';
 import ShareTwitter from '../share-twitter';
@@ -20,7 +20,7 @@ export default function PostMeta({ post }: Props) {
                 <div className="space-x-4">
                     <span className={`${roboto.variable} font-body text-sm text-gray-500`}><span className='hidden md:inline-block'>Last updated:</span> {formatDate(createdAt)}</span>
                     <span className="text-gray-200">|</span>
-                    <span className="text-sm text-gray-500">{readingTime(content)} min read</span>
+                    <span className="text-sm text-gray-500">{content ? readingTime(content) : '0'} min read</span>
                 </div>
                 <div className="flex items-center">
                     <CopyLink />
