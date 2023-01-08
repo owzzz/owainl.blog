@@ -8,7 +8,7 @@ export default async function Head() {
     <>
         <Meta />
         {page ? (
-            <title>{`${page?.slug} - ${page?.title}`}</title>
+            <title>{`${page?.title} - (${page?.slug})`}</title>
         ) : null }
     </>
     );

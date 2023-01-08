@@ -14,7 +14,7 @@ export default async function Head({ params }: Params) {
     <>
         <Meta />
         {post ? (
-            <title>{`${post?.slug} - ${post?.title}`}</title>
+            <title>{`${post?.title} - (${post?.slug})`}</title>
         ) : null }
     </>
     );
