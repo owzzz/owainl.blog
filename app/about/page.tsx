@@ -5,12 +5,13 @@ import Link from 'next/link';
 import { beVietnamPro } from '../../lib/fonts';
 import prisma from '../../lib/prisma';
 import { Page } from '../../lib/pages';
+import { Prisma } from '@prisma/client';
 
 export default async function About() {
   const page = await prisma.page.findUnique({
     where: {
       slug: 'about'
-    }
+    } as Prisma.PageWhereUniqueInput
   }) as Page | null;
 
   if (!page) {
