@@ -6,11 +6,16 @@ import { beVietnamPro } from '../../../lib/fonts';
 import Link from 'next/link';
 import prisma from '../../../lib/prisma';
 
+type Params = {
+  params: {
+    slug: string;
+  }
+}
 
-export default async function _Post() {
+export default async function _Post({ params }: Params) {
   const post = await prisma.post.findUnique({
     where: {
-      id: 1, // TODO: Make this dynamic
+      slug: params.slug,
     }
   }) as Post | null;
 

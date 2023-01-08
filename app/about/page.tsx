@@ -9,7 +9,7 @@ import { Page } from '../../lib/pages';
 export default async function About() {
   const page = await prisma.page.findUnique({
     where: {
-      id: 1 // TODO: Make This Dynamic
+      slug: 'about'
     }
   }) as Page | null;
 
