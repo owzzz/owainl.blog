@@ -5,6 +5,7 @@ import Markdown from '../../../components/markdown';
 import { beVietnamPro } from '../../../lib/fonts';
 import Link from 'next/link';
 import prisma from '../../../lib/prisma';
+import { Prisma } from '@prisma/client';
 
 type Params = {
   params: {
@@ -16,7 +17,7 @@ export default async function _Post({ params }: Params) {
   const post = await prisma.post.findUnique({
     where: {
       slug: params.slug,
-    }
+    } as Prisma.PageWhereUniqueInput
   }) as Post | null;
 
   if (!post) {
