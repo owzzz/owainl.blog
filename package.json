@@ -2,27 +2,20 @@
   "name": "owainl_site",
   "version": "0.2.0",
   "private": true,
-  "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint --fix . --ext .ts,.tsx",
-    "prisma:studio": "npx prisma studio",
-    "prisma:migrate": "npx prisma migrate mydb"
+    "lint:fix": "eslint --fix . --ext .ts,.tsx"
   },
   "dependencies": {
     "@next/font": "^13.1.1",
-    "@prisma/client": "4.8.0",
     "@sentry/nextjs": "^7.28.1",
     "eslint": "8.27.0",
     "eslint-config-next": "^13.1.1",
     "gray-matter": "^4.0.3",
     "next": "^13.1.1",
-    "prisma": "^4.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark": "^14.0.2",

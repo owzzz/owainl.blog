@@ -26,7 +26,7 @@ export type StaticPost = {
 export function getAllPosts(): StaticPost[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPosts = fileNames.map((fileName) => {
+  const allPosts = fileNames.map((fileName: string) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
 
@@ -45,7 +45,7 @@ export function getAllPosts(): StaticPost[] {
   });
   // Filter by Sort posts by date
   return allPosts
-    .filter((post) => Boolean(post.published) === true)
+    .filter((post: StaticPost) => Boolean(post.published) === true)
     .sort((a: StaticPost, b: StaticPost) => {
       if (a.createdAt < b.createdAt) {
         return 1;
