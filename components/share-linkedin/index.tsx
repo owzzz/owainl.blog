@@ -1,17 +1,17 @@
-import { Post } from '@prisma/client';
+import { Post } from "../../lib/posts";
 
 type Props = {
   post: Post
 }
 
 function generateUrl(post: Post): string {   
-    const { title, content, slug} = post; 
+    const { title, body, slug} = post; 
     const linkedUrl = 'https://www.linkedin.com/shareArticle';
 
     // Query params
     const _url = `https://${process.env['HOST']}/about/${slug}`;
     const _title = encodeURIComponent(title);
-    const _summary = encodeURIComponent(content ?? '');
+    const _summary = encodeURIComponent(body ?? '');
 
     // GA params
     const _source = 'linkedin';

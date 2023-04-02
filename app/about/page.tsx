@@ -3,10 +3,12 @@ import Markdown from '../../components/markdown';
 import PageMeta from '../../components/page-meta';
 import Link from 'next/link';
 import { beVietnamPro } from '../../lib/fonts';
-import { findUniquePageBySlug } from '../../lib/pages';
+import { getPage } from '../../lib/pages';
 
 export default async function About() {
-  const page = await findUniquePageBySlug('about');
+  const page = getPage();
+
+  const htmlFromMarkdown = await markdownToHtml(page.body);
 
   if (!page) {
     return (
@@ -20,9 +22,9 @@ export default async function About() {
   return (
     <section className='w-full max-w-[640px]'>
       <PageMeta page={page} />
-      { page.content ? (
-           <Markdown html={await markdownToHtml(page.content)} />
-        ) : null}
+      { htmlFromMarkdown ? (
+        <Markdown html={htmlFromMarkdown} />
+      ) : null}
     </section>
   );
 }

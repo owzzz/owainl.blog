@@ -1,47 +1,25 @@
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Page, Prisma } from '@prisma/client';
-import prisma from './prisma';
 
-export type StaticPage = {
-  title: string,
-  excerpt?: string,
-  content: string,
-  createdAt: string,
-  published: boolean;
-  slug: string;
+export type Page = {
+  title: string;
+  body: string;
+  date: string;
+  metaTitle?: string;
 }
 
-export function getPage(fileName?: string) {
-  if (!fileName) {
-    throw new Error('File name must be provided');
-  }
+const currentDirectory = path.join(process.cwd(), 'app/about');
 
-  const currentDirectory = path.join(process.cwd(), 'app/about');
+export function getPage(fileName = 'about') {
   const fullPath = path.join(currentDirectory, `${fileName}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  const isPublished = Boolean(matterResult.data.published);
-
-  if (!isPublished) {
-    return null;
-  }
 
   return {
-    content: matterResult.content,
+    body: matterResult.content,
     ...matterResult.data,
-  } as StaticPage;
-}
-
-export async function findUniquePageBySlug(slug: string): Promise<Page | null> {
-  const page = await prisma.page.findUnique({
-    where: {
-      slug,
-    } as Prisma.PageWhereUniqueInput
-  });
-
-  return page;
+  } as Page;
 }

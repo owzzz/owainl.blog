@@ -2,8 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { Prisma, Post } from '@prisma/client';
-import prisma from './prisma';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -13,17 +11,17 @@ export type Path = {
   }
 }
 
-export type StaticPost = {
-    id: number,
-    title: string,
-    excerpt?: string,
-    content: string,
-    createdAt: string,
-    published: boolean,
-    slug: string;
+export type Post = {
+  id: string,
+  date: string,
+  title: string,
+  slug?: string,
+  excerpt?: string,
+  body: string,
+  metaTitle?: string;
 }
 
-export function getAllPosts(): StaticPost[] {
+export function getAllPosts(): Post[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPosts = fileNames.map((fileName: string) => {
@@ -39,15 +37,14 @@ export function getAllPosts(): StaticPost[] {
 
     // Combine the data with the id
     return {
-      id: Number(id),
+      id: id,
       ...matterResult.data,
-    } as StaticPost;
+    } as Post;
   });
   // Filter by Sort posts by date
   return allPosts
-    .filter((post: StaticPost) => Boolean(post.published) === true)
-    .sort((a: StaticPost, b: StaticPost) => {
-      if (a.createdAt < b.createdAt) {
+    .sort((a: Post, b: Post) => {
+      if (a.date < b.date) {
         return 1;
       } else {
         return -1;
@@ -55,32 +52,17 @@ export function getAllPosts(): StaticPost[] {
   });
 }
 
-export function getPost(id: string): Post | null {
+export function getPost(id: string): Post {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  const isPublished = Boolean(matterResult.data.published);
-
-  if (!isPublished) {
-    return null;
-  }
 
   // Combine the data with the id
   return {
-    id: Number(id),
-    content: matterResult.content,
+    id,
+    body: matterResult.content,
     ...matterResult.data,
   } as Post;
-}
-
-export async function findUniquePostBySlug(slug: string): Promise<Post | null> {
-  const post = await prisma.post.findUnique({
-    where: {
-      slug,
-    } as Prisma.PostWhereUniqueInput
-  });
-
-  return post;
 }

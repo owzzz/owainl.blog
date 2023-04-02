@@ -1,13 +1,13 @@
 import Meta from '../../components/document/meta';
-import { findUniquePageBySlug } from '../../lib/pages';
+import { getPage } from '../../lib/pages';
 
 export default async function Head() {
-    const page = await findUniquePageBySlug('about');
+    const page = getPage();
 
     return (
     <>
         <Meta />
-        {page ? (<title>{`${page?.title} - (${page?.slug})`}</title>) : null }
+        <title>{page.metaTitle}</title>
     </>
     );
 }
