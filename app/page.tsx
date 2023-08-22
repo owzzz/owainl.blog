@@ -15,20 +15,19 @@ export default function Page() {
         </p>
         
         <div className='flex mt-2 items-center text-gray-500'>
-          <p className={`${roboto.variable} font-body`}>Building Software At</p> 
-          <Image src="/apple.svg" className="ml-2 relative bottom-0.5" alt="Apple Logo" width={20} height={20} />
+          <p className={`${roboto.variable} font-body`}>Building Software at Apple.</p> 
         </div>
 
         <div className='mt-24'>
           <ul className='flex items-center space-x-3'>
-            <li className='pr-0.5'>
+            <li>
               <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">Linkedin</Link>
             </li>
-            <li className='pr-0.5'>
-              <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://twitter.com/Owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Twitter</Link>
-            </li>
-            <li className='pr-0.5'>
+            <li>
               <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="http://github.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Github</Link>
+            </li>
+            <li>
+              <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://x.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;X</Link>
             </li>
           </ul>
         </div>
