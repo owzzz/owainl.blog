@@ -1,14 +1,12 @@
-import { formatDate } from '../../lib/date';
-import { beVietnamPro, roboto } from '../../lib/fonts';
+import { beVietnamPro } from '../../lib/fonts';
 import { Page } from '../../lib/pages';
-import CopyLink from '../copy-link';
 
 type Props = {
   page: Page
 }
 
 export default function PageMeta({ page }: Props) {
-    const {title, date} = page;
+    const { title } = page;
 
     return (
         <header className='border-b border-gray-200 mb-6'>
