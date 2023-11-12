@@ -13,20 +13,21 @@ export default function Page() {
           Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas.
         </p>
         
-        <div className='flex mt-2 items-center text-gray-500'>
+        <div className='mt-2 items-center text-gray-500 space-y-2'>
           <p className={`${roboto.variable} font-body`}>Building Software at Apple.</p> 
+          <p className={`${roboto.variable} font-body`}>Austin, Texas.</p>
         </div>
 
-        <div className='mt-24'>
+        <div className='mt-24 text-xs text-black hover:text-gray-700 tracking-wide'>
           <ul className='flex items-center space-x-3'>
             <li>
-              <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">Linkedin</Link>
+              <Link href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">Linkedin</Link>
             </li>
             <li>
-              <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="http://github.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Github</Link>
+              <Link href="http://github.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Github</Link>
             </li>
             <li>
-              <Link className="text-xs text-black hover:text-gray-700 tracking-wide" href="https://x.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;X</Link>
+              <Link href="https://x.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;X</Link>
             </li>
           </ul>
         </div>

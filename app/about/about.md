@@ -11,4 +11,3 @@ Originally from Wales in the UK, I have been in the states for nearly 10 years, 
 In my spare time I enjoy hanging out with the family, [cycling](https://breakfastclubatx.com/) with friends, making cocktails, [cooking outside](https://us.gozney.com/) and working on projects that incorporate great design with engineering to solve interesting problems.
 
 Owain.L
-
