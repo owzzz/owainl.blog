@@ -1,7 +1,9 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": [
-    "roboto"
-  ]
+    "eslint.validate": [
+        "glimmer-ts",
+        "glimmer-js"
+    ],
+    "cSpell.words": [
+        "Owain"
+    ]
 }
