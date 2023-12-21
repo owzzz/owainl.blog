@@ -5,7 +5,7 @@
             <h1 class="font-title text-3xl md:text-4xl pb-4">Hey, I'm Owain Llewellyn,<br/>a Software Engineer and Designer based in Austin, TX.</h1>
         </header>
         <div class="content">
-          <p>Originally from Wales in the UK, I have been living and working in the states for nearly 10 years, raising two young girls with my wife in Austin, Texas. I specialize in full-stack engineering, UI/UX design, and prototyping. I am currently building critical internal business tools at Apple that are used by a broad audience within the organization.</p>
+          <p>Originally from Wales in the UK, I have been living and working in the states for nearly 10 years, raising two young girls with my wife in Austin, Texas. I am currently building internal tools at Apple, specializing in full-stack engineering, UI/UX design, and prototyping.</p>
           
           <p>I am a collaborative and motivated self-starter, proactive in solving complex problems, operating in fast-paced and dynamic environments with experience in building high-quality enterprise software at scale. I have worked with a variety of luxury brands, tech companies, and government organizations across Europe and North America.</p>
           
