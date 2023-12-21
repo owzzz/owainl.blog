@@ -27,7 +27,7 @@
 						<a href="http://github.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Github</a>
 					</li>
 					<li>
-						<a href="https://x.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;X</a>
+						<a href="/static/owain_llewellyn_resume.pdf" download target="_blank">|&nbsp;&nbsp;&nbsp;Resume</a>
 					</li>
 				</ul>
 			</div>
