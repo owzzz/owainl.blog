@@ -11,17 +11,14 @@
     </span>
   </h1>
 
-  <p class="font-body text-gray-500 mt-4 leading-relaxed">
-    Passionate About Digital Technologies, Great Design & Clever Entrepreneurial Ideas.
-  </p>
-
-  <div class='mt-2 items-center text-gray-500 space-y-2'>
+  <div class="content !space-y-1 mt-6">
+    <p>Passionate About Digital Technologies, Great Design and Clever Entrepreneurial Ideas.</p>
     <p>Building Software at Apple.</p>
     <p>Austin, Texas.</p>
   </div>
 
-  <div class='mt-24 text-xs text-black hover:text-gray-700 tracking-wide'>
-    <ul class='flex items-center space-x-3'>
+  <div class="mt-24 text-xs text-black hover:text-gray-700 tracking-wide">
+    <ul class="flex items-center space-x-3">
       <li>
         <a href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">Linkedin</a>
       </li>
