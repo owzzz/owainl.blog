@@ -1,14 +1,14 @@
 import { createClient } from '@sanity/client';
 
-import { SANITY_PROJECT_ID, SANITY_DATASET } from '$env/static/private';
+import { NEXT_PUBLIC_SANITY_DATASET, NEXT_PUBLIC_SANITY_PROJECT_ID } from '$env/static/private';
 
-if (!SANITY_PROJECT_ID || !SANITY_DATASET) {
+if (!NEXT_PUBLIC_SANITY_PROJECT_ID || !NEXT_PUBLIC_SANITY_DATASET) {
 	throw new Error('Did you forget to run sanity init --env?');
 }
 
 export const client = createClient({
-	projectId: SANITY_PROJECT_ID,
-	dataset: SANITY_DATASET,
+	projectId: NEXT_PUBLIC_SANITY_PROJECT_ID,
+	dataset: NEXT_PUBLIC_SANITY_DATASET,
 	useCdn: false,
 	apiVersion: '2023-03-20' // date of setup
 });
