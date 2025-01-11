@@ -4,7 +4,7 @@ import type { ImageAsset, PortableTextBlock, Slug } from '@sanity/types';
 
 export async function getPosts(): Promise<Post[]> {
 	return await client.fetch(
-		groq`*[_type == "post" && defined(slug.current)] {
+		groq`*[_type == "post" && defined(slug.current) && publishedAt != null] {
       _createdAt,
       title,
       publishedAt,
@@ -13,7 +13,7 @@ export async function getPosts(): Promise<Post[]> {
       categories[]-> {
         title
       }
-    } | order(_createdAt desc)`
+    } | order(publishedAt desc)`
 	);
 }
 
