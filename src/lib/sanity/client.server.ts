@@ -10,5 +10,5 @@ export const client = createClient({
 	projectId: NEXT_PUBLIC_SANITY_PROJECT_ID,
 	dataset: NEXT_PUBLIC_SANITY_DATASET,
 	useCdn: false,
-	apiVersion: '2023-03-20' // date of setup
+	apiVersion: '2023-11-19' // date of setup
 });
