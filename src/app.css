@@ -34,3 +34,7 @@
 .content a {
   @apply underline;
 }
+
+p:not(:first-child) {
+  @apply mt-5; 
+}

@@ -8,7 +8,5 @@
 </script>
 
 {#if children.length === 1 && children[0].text}
-  <p class="font-body mt-4 text-sm">{children[0].text}</p>
-{:else}
-  <br />
+  <p class="font-body text-gray-700">{children[0].text}</p>
 {/if}

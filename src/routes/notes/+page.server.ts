@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = (async () => {
-	const posts = await getPosts();
+  const posts = await getPosts();
 
 	if (posts) {
 		return {
