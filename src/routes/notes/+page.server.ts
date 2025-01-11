@@ -1,15 +1,15 @@
 import { getPosts } from '$lib/queries';
-import { error } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = (async () => {
   const posts = await getPosts();
 
-	if (posts) {
-		return {
-			posts
-		};
-	}
+  if (!posts || posts.length === 0) {
+    throw redirect(307, '/');
+  }
 
-	throw error(404, 'Not found');
+  return {
+    posts
+  };
 });
