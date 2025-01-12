@@ -20,7 +20,10 @@
   <div class="mt-24 text-xs text-black hover:text-gray-700 tracking-wide">
     <ul class="flex items-center space-x-3">
       <li>
-        <a href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">Linkedin</a>
+        <a href="https://x.com/Owzzz" target="_blank">X</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/owainllewellyn/" target="_blank">|&nbsp;&nbsp;&nbsp;Linkedin</a>
       </li>
       <li>
         <a href="http://github.com/owzzz" target="_blank">|&nbsp;&nbsp;&nbsp;Github</a>
