@@ -3,13 +3,14 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = (async () => {
-  const posts = await getPosts();
-
-  if (!posts || posts.length === 0) {
-    throw redirect(307, '/');
+  try {
+    const posts = await getPosts();
+    if (!posts || posts.length === 0) {
+      throw redirect(307, '/');
+    }
+    return { posts };
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    throw error;
   }
-
-  return {
-    posts
-  };
 });
