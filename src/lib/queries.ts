@@ -4,7 +4,7 @@ import type { ImageAsset, PortableTextBlock, Slug } from '@sanity/types';
 
 export async function getPosts(): Promise<Post[]> {
 	return await client.fetch(
-		groq`*[_type == "post" && defined(slug.current) && publishedAt != null] {
+		groq`*[_type == "post"] {
       _createdAt,
       title,
       publishedAt,
