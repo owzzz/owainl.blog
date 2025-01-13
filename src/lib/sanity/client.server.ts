@@ -11,5 +11,6 @@ export const client = createClient({
 	dataset: NEXT_PUBLIC_SANITY_DATASET,
 	useCdn: false,
 	apiVersion: '2023-11-19',
+  perspective: 'published',
   token: SANITY_API_READ_TOKEN
 });
