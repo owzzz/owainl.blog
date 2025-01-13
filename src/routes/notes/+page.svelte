@@ -8,7 +8,7 @@
 	import Paragraph from '$lib/components/portable-text/paragraph.svelte';
 	import ListWrapper from '$lib/components/portable-text/list-wrapper.svelte';
 	import Table from '$lib/components/portable-text/table.svelte';
-	import Link from '$lib/components/portable-text/link.svelte';
+	import AbsoluteUrl from '$lib/components/portable-text/absolute-url.svelte';
 
 	export let data: PageData;
 
@@ -27,7 +27,7 @@
   <header>
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
   </header>
-  <main class="mt-8">
+  <main class="my-8">
     {#if data.posts.length}
       {#each data.posts as post}
         <article class="space-y-4">
@@ -61,7 +61,7 @@
                   table: Table,
                 },
                 marks: {
-                  link: Link,
+                  link: AbsoluteUrl,
                 },
                 block: {
                   normal: Paragraph,
