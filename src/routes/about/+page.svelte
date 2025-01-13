@@ -9,7 +9,7 @@
           
           <p>I am a collaborative and motivated self-starter, proactive in solving technical problems, operating in fast-paced and dynamic environments with experience in building high-quality enterprise software at scale. I have worked with a variety of luxury brands, tech companies, and government organizations across Europe and North America.</p>
           
-          <p>In my spare time I enjoy tinkering with technology, reading books, hanging out with family, cycling with friends and cooking outside.</p>
+          <p>In my spare time I enjoy tinkering with technology, reading books, hanging out with family and friends, cycling and cooking outside.</p>
           
           <p>Owain.L</p>
         </div>
