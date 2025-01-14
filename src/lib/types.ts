@@ -10,6 +10,7 @@ export interface Post {
 	mainImage?: ImageAsset;
   categories?: Category[];
 	body: PortableTextBlock[];
+  excerpt: string;
 }
 
 export interface Page {
@@ -17,6 +18,7 @@ export interface Page {
   title: string;
   slug: Slug;
   body: PortableTextBlock[];
+  excerpt: string;
 }
 
 export interface Category {

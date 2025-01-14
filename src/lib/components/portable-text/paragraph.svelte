@@ -5,6 +5,7 @@
 
   $: ({ value } = portableText);
   $: ({ children } = value);
+  console.log(value);
 </script>
 
 {#if children.length > 0 }

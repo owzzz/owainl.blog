@@ -18,7 +18,7 @@
       table: Table,
     },
     marks: {
-      link: AbsoluteUrl,
+      link: AbsoluteUrl
     },
     block: {
       normal: Paragraph,

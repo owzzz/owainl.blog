@@ -18,7 +18,7 @@ export const schemaTypes = [
       {name: 'author', type: 'reference', to: [{type: 'author'}]},
       {name: 'mainImage', type: 'image'},
       {name: 'categories', type: 'array', of: [{type: 'reference', to: [{type: 'category'}]}]},
-      {name: 'excerpt', type: 'text'},
+      {name: 'excerpt', type: 'array', of: [{type: 'block'}]},
       {name: 'body', type: 'array', of: [
         {
           type: 'block',
@@ -71,7 +71,7 @@ export const schemaTypes = [
       {name: 'slug', type: 'slug'},
       {name: 'body', type: 'array', of: [{type: 'block'}]},
       {name: 'publishedAt', type: 'datetime'},
-      {name: 'excerpt', type: 'text'}
+      {name: 'excerpt', type: 'array', of: [{type: 'block'}]},
     ],
   }
 ]

@@ -3,18 +3,12 @@
   import { formatDate } from '$lib/utils/format-date';
   import { calculateReadTime } from '$lib/utils/calculate-read-time';
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
+	import type { Post } from '$lib/types';
 
 	export let data: PageData;
+  const { posts } = data as { posts: Post[] };
 
-  function getPostContent(post: any): string {
-    return post.body
-      .map((block: any) => 
-        block.children
-          ?.map((child: any) => child.text)
-          .join(' ') || ''
-      )
-      .join(' ');
-  }
+  console.log(posts);
 </script>
 
 <div class="flex-grow w-full max-w-xl">
@@ -42,12 +36,16 @@
                 {#if post.publishedAt}
                   <span>•</span>
                 {/if}
-                <span>{calculateReadTime(getPostContent(post))} min read</span>
+                <span>{calculateReadTime(post.body)} min read</span>
               </div>
             </div>
           </header>
           <main>
-            <PortableTextComponents value={post.body} />
+            <PortableTextComponents value={post.excerpt} />
+
+            <div class="mt-4">
+              <a href={`/notes/${post.slug.current}`} class="text-black text-sm underline">Read More…</a>
+            </div>
           </main>
         </article>
       {/each}
