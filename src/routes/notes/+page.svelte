@@ -7,8 +7,6 @@
 
 	export let data: PageData;
   const { posts } = data as { posts: Post[] };
-
-  console.log(posts);
 </script>
 
 <div class="flex-grow w-full max-w-xl">
@@ -16,7 +14,7 @@
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
   </header>
   <main class="my-8">
-    {#if data.posts.length}
+    {#if posts.length}
       {#each data.posts as post}
         <article class="space-y-4">
           <header class="mb-4 pb-4 border-b border-gray-200">

@@ -4,13 +4,11 @@
   export let portableText: BlockComponentProps
 
   $: ({ value } = portableText);
-  $: ({ children } = value);
-  console.log(value);
 </script>
 
-{#if children.length > 0 }
+{#if value.children.length > 0 }
   <p class="font-body">
-    {#each children as child}
+    {#each value.children as child}
       {#if child.marks?.includes('strong')}
         <strong class="font-bold text-black">{child.text}</strong>
       {:else if child.marks?.includes('em')}
@@ -21,7 +19,7 @@
         <u class="underline">{child.text}</u>
       {:else if child.marks?.includes('italic')}
         <i class="italic">{child.text}</i>
-      {:else if child.marks?.includes('strike')}
+      {:else if child.marks?.includes('strike-through')}
         <s class="line-through">{child.text}</s>
       {:else if child.marks?.includes('highlight')}
         <span class="bg-yellow-100">{child.text}</span>
