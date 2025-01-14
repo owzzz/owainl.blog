@@ -2,13 +2,7 @@
 	import type { PageData } from './$types';
   import { formatDate } from '$lib/utils/format-date';
   import { calculateReadTime } from '$lib/utils/calculate-read-time';
-  import { PortableText } from '@portabletext/svelte';
-	import CustomHeading from '$lib/components/portable-text/custom-heading.svelte';
-	import CodeBlock from '$lib/components/portable-text/code-block.svelte';
-	import Paragraph from '$lib/components/portable-text/paragraph.svelte';
-	import ListWrapper from '$lib/components/portable-text/list-wrapper.svelte';
-	import Table from '$lib/components/portable-text/table.svelte';
-	import AbsoluteUrl from '$lib/components/portable-text/absolute-url.svelte';
+	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 
 	export let data: PageData;
 
@@ -53,31 +47,7 @@
             </div>
           </header>
           <main>
-            <PortableText 
-              value={post.body} 
-              components={{
-                types: {
-                  code: CodeBlock,
-                  table: Table,
-                },
-                marks: {
-                  link: AbsoluteUrl,
-                },
-                block: {
-                  normal: Paragraph,
-                  h1: CustomHeading,
-                  h2: CustomHeading,
-                  h3: CustomHeading,
-                  h4: CustomHeading,
-                  h5: CustomHeading,
-                  h6: CustomHeading,
-                },
-                list: {
-                  bullet: ListWrapper,
-                  numbered: ListWrapper
-                },
-              }}
-            />
+            <PortableTextComponents value={post.body} />
           </main>
         </article>
       {/each}

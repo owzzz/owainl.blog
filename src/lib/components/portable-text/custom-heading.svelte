@@ -3,17 +3,13 @@
 
   export let portableText: BlockComponentProps
 
-  $: ({indexInParent, global, value} = portableText)
-  $: ({ptBlocks} = global)
+  $: ({value} = portableText)
   $: ({style} = value)
-
-  $: precededByHeading = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(ptBlocks[indexInParent - 1]?.style)
-
   $: anchorId = `heading-${value._key}`
 </script>
 
 <!-- If preceded by heading, have a higher margin top -->
-<div class="{precededByHeading ? 'mt-10' : 'mt-4'}" id={anchorId}>
+<div class="mt-4" id={anchorId}>
   <a href="#{anchorId}">
     <span class="sr-only">Link to this heading</span>
   </a>
@@ -27,7 +23,9 @@
     <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal"><slot /></h4>
   {:else if style === 'h5'}
     <h5 class="font-title text-lg md:text-xl tracking-wide leading-normal"><slot /></h5>
-  {:else}
+  {:else if style === 'h6'}
     <h6 class="font-title text-md md:text-lg tracking-wide leading-normal"><slot /></h6>
+  {:else}
+    <h1 class="font-title text-4xl md:text-5xl tracking-wide leading-normal"><slot /></h1>
   {/if}
 </div>
