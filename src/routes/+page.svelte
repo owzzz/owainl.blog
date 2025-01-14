@@ -3,12 +3,13 @@
 </script>
 
 <CenteredContent>
-  <h1 class="font-title text-2xl md:text-3xl tracking-wide leading-normal">
-    Owain Llewellyn<br />
+  <h1 class="font-title text-3xl md:text-4xl tracking-wide leading-normal">
+    <span class="text-gray-500 text-md">Owain Llewellyn<br /></span>
 
-    <span class="text-3xl md:text-5xl mt-2 block">
-      Software Engineer &amp; Designer<span class="animate-blink">_</span>
+    <span class="text-4xl md:text-6xl mt-2 block">
+      Full Stack Engineer
     </span>
+    <span class="inline-block mt-2">&amp; UX Designer<span class="animate-blink">_</span></span>
   </h1>
 
   <div class="content !space-y-1 mt-6">
