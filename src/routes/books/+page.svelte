@@ -1,7 +1,7 @@
 <script lang="ts">
-	import CalculateReadTime from '$lib/components/calculate-read-time/component.svelte';
 	import type { PageData } from './$types';
   import { formatDate } from '$lib/utils/format-date';
+  import CalculateReadTime from '$lib/components/calculate-read-time/component.svelte';
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
   import EmptyBanner from '$lib/components/empty-banner/component.svelte';
 	import type { Post } from '$lib/types';
@@ -12,12 +12,12 @@
 
 <div class="flex-grow w-full max-w-xl">
   <header>
-    <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
+    <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
   </header>
   <main class="my-8">
     {#if posts.length}
       {#each data.posts as post}
-        <article class="space-y-4">
+        <article class="space-y-8">
           <header class="mb-4 pb-4 border-b border-gray-200">
             <h1 class="font-title text-1xl md:text-3xl tracking-wide leading-normal">{post.title}</h1>
             <div class="text-sm text-gray-500 my-2 flex justify-start items-center gap-2">
@@ -35,21 +35,24 @@
                 {#if post.publishedAt}
                   <span>•</span>
                 {/if}
+                
                 <span><CalculateReadTime post={post} /></span>
               </div>
             </div>
           </header>
           <main>
-            <PortableTextComponents value={post.excerpt} />
+            {#if post.excerpt}
+              <PortableTextComponents value={post.excerpt} />
+            {/if}
 
             <div class="mt-4">
-              <a href={`/notes/${post.slug.current}`} class="text-black text-sm underline">Read More…</a>
+              <a href={`/books/${post.slug.current}`} class="text-black text-sm underline">Continue Reading…</a>
             </div>
           </main>
         </article>
       {/each}
     {:else}
-      <EmptyBanner title="No posts yet" additionalText="If this is a mistake please try refreshing the page or check back later." />
+      <EmptyBanner title="No book reviews yet" additionalText="If this is a mistake please try refreshing the page or check back later." />
     {/if}
   </main>
 </div>
