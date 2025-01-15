@@ -2,20 +2,27 @@ import groq from 'groq';
 import { client } from './sanity/client.server';
 import type { Page, Post } from '$lib/types';
 
-export async function getPosts(): Promise<Post[]> {
-	return await client.fetch(
-		groq`*[_type == "post" && defined(slug.current) && publishedAt != null] {
-      title,
-      publishedAt,
-      slug,
-      excerpt,
-      body,
-      categories[]-> {
-        title
-      }
-    } | order(publishedAt desc)`
-	);
+export async function getPosts(category?: string): Promise<Post[]> {
+  let query = `*[_type == "post" && defined(slug.current) && publishedAt != null`
+
+  query += category 
+    ? ` && "${category}" in categories[]->title` 
+    : ` && !("Books" in categories[]->title)`
+
+  query += `] | order(publishedAt desc) {
+    title,
+    publishedAt,
+    slug,
+    excerpt,
+    body,
+    categories[]-> {
+      title
+    }
+  }`
+
+	return await client.fetch(groq`${query}`);
 }
+
 
 export async function getPost(slug: string): Promise<Post> {
 	return await client.fetch(
@@ -25,6 +32,7 @@ export async function getPost(slug: string): Promise<Post> {
       slug,
       excerpt,
       body,
+      "mainImage": mainImage.asset->url,
       categories[]-> {
         title
       }

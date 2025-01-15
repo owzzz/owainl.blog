@@ -7,7 +7,7 @@ export interface Post {
   publishedAt?: string;
 	slug: Slug;
 	author: Author,
-	mainImage?: ImageAsset;
+	mainImage?: string;
   categories?: Category[];
 	body: PortableTextBlock[];
   excerpt: string;
