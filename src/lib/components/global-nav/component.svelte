@@ -8,6 +8,7 @@
         <ul class='flex space-x-8'>
             <li><a data-sveltekit-preload-data class="text-xs hover:underline {$page.url.pathname === '/about' ? 'font-bold underline' : ''}" href="/about">About</a></li>
             <li><a data-sveltekit-preload-data class="text-xs hover:underline {$page.url.pathname.startsWith('/notes') ? 'font-bold underline' : ''}" href="/notes">Notes</a></li>
+            <li><a data-sveltekit-preload-data class="text-xs hover:underline {$page.url.pathname.startsWith('/books') ? 'font-bold underline' : ''}" href="/books">Books</a></li>
             <li><a class="text-xs hover:underline" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry">Contact</a></li>
         </ul>
     </div>
