@@ -9,7 +9,7 @@
 </script>
 
 <!-- If preceded by heading, have a higher margin top -->
-<div class="mt-4" id={anchorId}>
+<div class="mt-8" id={anchorId}>
   <a href="#{anchorId}">
     <span class="sr-only">Link to this heading</span>
   </a>
