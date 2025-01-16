@@ -11,8 +11,7 @@
 
 <div class="flex-grow w-full max-w-xl">
   <header class="flex justify-between items-center">
-    <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
-    <a href="/notes" class="text-black text-sm underline">Back to Notes</a>
+    <a href="/notes" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Notes_</a>
   </header>
   <main class="my-8">
     <article class="space-y-4">

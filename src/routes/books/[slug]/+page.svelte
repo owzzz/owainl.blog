@@ -10,14 +10,20 @@
 </script>
 
 <div class="flex-grow w-full max-w-xl">
-  <header class="flex justify-between items-center">
-    <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
-    <a href="/books" class="text-black text-sm underline">Back to Books</a>
+  <header>
+    <a href="/books" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Books_</a>
   </header>
   <main class="my-8">
     <article class="space-y-4">
       <header class="mb-4 pb-4 border-b border-gray-200">
-        <h1 class="font-title text-1xl md:text-3xl tracking-wide leading-normal">{post.title}</h1>
+        <div class="flex justify-between items-end">
+          <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal">
+            {post.title}
+          </h1>
+          {#if post.mainImage}
+            <img src={post.mainImage.url} alt={post.mainImage.alt} class="w-36 pl-6 h-auto" />
+          {/if}
+        </div>
         <div class="text-sm text-gray-500 my-2 flex justify-start items-center gap-2">
           {#if post.categories?.length}
             <ul class="flex flex-wrap space-x-1">

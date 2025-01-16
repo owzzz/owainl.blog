@@ -32,7 +32,10 @@ export async function getPost(slug: string): Promise<Post> {
       slug,
       excerpt,
       body,
-      "mainImage": mainImage.asset->url,
+      "mainImage": {
+        "url": mainImage.asset->url,
+        "alt": mainImage.alt
+      },
       categories[]-> {
         title
       }

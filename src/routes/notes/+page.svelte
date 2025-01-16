@@ -43,7 +43,7 @@
             <PortableTextComponents value={post.excerpt} />
 
             <div class="mt-4">
-              <a href={`/notes/${post.slug.current}`} class="text-black text-sm underline">Read More…</a>
+              <a href={`/notes/${post.slug.current}`} class="text-black text-sm underline">Continue Reading…</a>
             </div>
           </main>
         </article>

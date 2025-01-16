@@ -1,5 +1,10 @@
 import type { ImageAsset, PortableTextBlock, Slug } from "@sanity/types";
 
+export interface Image {
+  url: string;
+  alt: string;
+}
+
 export interface Post {
 	_type: 'post';
 	_createdAt: string;
@@ -7,7 +12,7 @@ export interface Post {
   publishedAt?: string;
 	slug: Slug;
 	author: Author,
-	mainImage?: string;
+	mainImage?: Image;
   categories?: Category[];
 	body: PortableTextBlock[];
   excerpt: string;
