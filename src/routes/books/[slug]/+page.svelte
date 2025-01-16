@@ -15,33 +15,34 @@
   </header>
   <main class="my-8">
     <article class="space-y-4">
-      <header class="mb-4 pb-4 border-b border-gray-200">
-        <div class="flex justify-between items-end">
-          <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal">
-            {post.title}
-          </h1>
-          {#if post.mainImage}
-            <img src={post.mainImage.url} alt={post.mainImage.alt} class="w-36 pl-6 h-auto" />
-          {/if}
-        </div>
-        <div class="text-sm text-gray-500 my-2 flex justify-start items-center gap-2">
-          {#if post.categories?.length}
-            <ul class="flex flex-wrap space-x-1">
-              {#each post.categories as category}
-                <li class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{category.title}</li>
-              {/each}
-            </ul>
-          {/if}
-          <div>
-            {#if post.publishedAt}
-              <span>Published: {formatDate(post.publishedAt)}</span>
+      <header class="flex justify-between items-end mb-4 pb-4 border-b border-gray-200">
+        <div>
+            <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal">
+              {post.title}
+            </h1>
+          <div class="text-sm text-gray-500 mt-4 flex justify-start items-center gap-2">
+            {#if post.categories?.length}
+              <ul class="flex flex-wrap space-x-1">
+                {#each post.categories as category}
+                  <li class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{category.title}</li>
+                {/each}
+              </ul>
             {/if}
-            {#if post.publishedAt}
-              <span>•</span>
-            {/if}
-            <span><CalculateReadTime post={post} /></span>
+            <div>
+              {#if post.publishedAt}
+                <span>Published: {formatDate(post.publishedAt)}</span>
+              {/if}
+              {#if post.publishedAt}
+                <span>•</span>
+              {/if}
+              <span><CalculateReadTime post={post} /></span>
+            </div>
           </div>
         </div>
+
+        {#if post.mainImage}
+          <img src={post.mainImage.url} alt={post.mainImage.alt} class="w-40 pl-6 h-auto" />
+        {/if}
       </header>
       <main>
         {#if post.body}
