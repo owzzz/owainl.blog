@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { Post } from '$lib/types';
+	import type { Book, Post } from '$lib/types';
   import { calculateReadTime } from '$lib/utils/calculate-read-time';
 
-  export let post: Post;
+  export let post: Post|Book;
 
-  const readTime = calculateReadTime(post.body ? post.body : post.excerpt);
+  const readTime = calculateReadTime(post.body || post.excerpt || []);
 </script>
 
 {#if post}

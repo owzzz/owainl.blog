@@ -1,13 +1,13 @@
-import { getPosts } from '$lib/queries';
+import { getBooks } from '$lib/queries/books';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
   try {
-    const bookPosts = await getPosts('Books');
+    const books = await getBooks();
 
-    return { posts: bookPosts };
+    return { books };
   } catch (error) {
-    console.error('Error fetching posts:', error);
+    console.error('Error fetching books:', error);
     throw error;
   }
 };

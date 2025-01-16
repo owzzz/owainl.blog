@@ -3,52 +3,60 @@
   import type { PageData } from './$types';
   import { formatDate } from '$lib/utils/format-date';
   import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
-	import type { Post } from '$lib/types';
-
+	import type { Book } from '$lib/types';
+  import Sidebar from '$lib/components/sidebar/component.svelte';
   export let data: PageData;
-  const { post } = data as { post: Post };
+  const { book } = data as { book: Book };
 </script>
 
-<div class="flex-grow w-full max-w-xl">
+<div class="flex-grow w-full max-w-[700px]">
   <header>
     <a href="/books" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Books_</a>
   </header>
-  <main class="my-8">
-    <article class="space-y-4">
-      <header class="flex justify-between items-end mb-4 pb-4 border-b border-gray-200">
+  <header class="flex justify-between items-end mb-4 pb-4 border-b border-gray-200">
+    <div>
+      <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
+        {book.title}
+        {#if book.bookAuthor}
+          <span class="text-gray-500 text-sm">{book.bookAuthor.name}</span>
+        {/if}
+      </h1>
+      
+      <div class="text-sm text-gray-500 mt-4 flex justify-start items-center gap-2">
+        {#if book.genre}
+          <ul class="flex flex-wrap space-x-1">
+            <li class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{book.genre.title}</li>
+          </ul>
+        {/if}
         <div>
-            <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal">
-              {post.title}
-            </h1>
-          <div class="text-sm text-gray-500 mt-4 flex justify-start items-center gap-2">
-            {#if post.categories?.length}
-              <ul class="flex flex-wrap space-x-1">
-                {#each post.categories as category}
-                  <li class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{category.title}</li>
-                {/each}
-              </ul>
-            {/if}
-            <div>
-              {#if post.publishedAt}
-                <span>Published: {formatDate(post.publishedAt)}</span>
-              {/if}
-              {#if post.publishedAt}
-                <span>•</span>
-              {/if}
-              <span><CalculateReadTime post={post} /></span>
-            </div>
-          </div>
+          {#if book.publishedAt}
+            <span>Published: {formatDate(book.publishedAt)}</span>
+          {/if}
+          {#if book.publishedAt}
+            <span>•</span>
+          {/if}
+          <span><CalculateReadTime post={book} /></span>
         </div>
+      </div>
+    </div>
 
-        {#if post.mainImage}
-          <img src={post.mainImage.url} alt={post.mainImage.alt} class="w-40 pl-6 h-auto" />
-        {/if}
-      </header>
-      <main>
-        {#if post.body}
-          <PortableTextComponents value={post.body} />
-        {/if}
+    {#if book.mainImage}
+      <img src={book.mainImage.url} alt={book.mainImage.alt} class="w-40 pl-6 h-auto" />
+    {/if}
+  </header>
+  <main class="flex justify-between items-start gap-4 my-8">
+    <article class="space-y-4 w-2/3">
+      <main class="space-y-8">
+        {#each book.chapters as chapter, idx}
+          <section class="border-b-4 border-gray-200 pb-10 mb-6">
+            <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal" id={chapter.slug.current} data-scroll-id={chapter.slug.current}>Chapter {idx + 1}: {chapter.title}</h4>
+            <PortableTextComponents value={chapter.body} />
+          </section>
+        {/each}
       </main>
     </article>
+    <aside class="w-1/3 sticky top-10">
+      <Sidebar book={book} />
+    </aside>
   </main>
 </div>

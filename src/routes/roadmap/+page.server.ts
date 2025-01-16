@@ -1,4 +1,4 @@
-import { getPage } from '$lib/queries';
+import { getPage } from '$lib/queries/pages';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {

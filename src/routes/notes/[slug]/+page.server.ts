@@ -1,4 +1,4 @@
-import { getPost } from '$lib/queries';
+import { getPost } from '$lib/queries/posts';
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
