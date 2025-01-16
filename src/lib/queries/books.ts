@@ -10,6 +10,12 @@ export async function getBooks(): Promise<Book[]> {
     excerpt,
     body,
     _type,
+    chapters[]-> {
+      title,
+      slug,
+      body,
+      quote
+    },
     "genre": {
       "title": genre->title
     },
