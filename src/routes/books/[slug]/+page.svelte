@@ -48,7 +48,7 @@
     <article class="space-y-4 w-2/3">
       <main class="divide-y-4 divide-gray-200 space-y-8">
         {#each book.chapters as chapter, idx}
-          <section class="not:first:pt-10 not:first:pb-4">
+          <section class="first:pt-0 pt-10 not-first:pb-4">
             <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal" id={chapter.slug.current} data-scroll-id={chapter.slug.current}>Chapter {idx + 1}: {chapter.title}</h4>
             <PortableTextComponents value={chapter.body} />
           </section>

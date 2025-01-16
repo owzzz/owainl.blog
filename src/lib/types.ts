@@ -192,6 +192,8 @@ export type Book = {
         _key: string
       }>
     }>
+    quote?: string
+    quoteAuthor?: string
   }>
 }
 
