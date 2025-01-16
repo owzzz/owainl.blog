@@ -15,6 +15,7 @@ export async function getPosts(category?: string): Promise<Post[]> {
     slug,
     excerpt,
     body,
+    _type,
     categories[]-> {
       title
     }
@@ -31,6 +32,7 @@ export async function getPost(slug: string): Promise<Post> {
       slug,
       excerpt,
       body,
+      _type,
       categories[]-> {
         title
       }

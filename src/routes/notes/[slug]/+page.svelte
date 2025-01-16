@@ -32,7 +32,7 @@
             {#if post.publishedAt}
               <span>•</span>
             {/if}
-            <span><CalculateReadTime post={post} /></span>
+            <span><CalculateReadTime content={post} /></span>
           </div>
         </div>
       </header>

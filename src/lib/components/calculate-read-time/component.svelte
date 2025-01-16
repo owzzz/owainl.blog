@@ -2,11 +2,11 @@
 	import type { Book, Post } from '$lib/types';
   import { calculateReadTime } from '$lib/utils/calculate-read-time';
 
-  export let post: Post|Book;
+  export let content: Post|Book;
 
-  const readTime = calculateReadTime(post.body || post.excerpt || []);
+  const readTime = calculateReadTime(content);
 </script>
 
-{#if post}
+{#if readTime > 0}
   Reading Time: {readTime} {readTime === 1 ? 'Minute' : 'Minutes'}
 {/if}

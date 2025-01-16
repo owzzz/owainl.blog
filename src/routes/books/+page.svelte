@@ -6,6 +6,7 @@
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 
 	export let data: PageData;
+  let books = data.books;
 </script>
 
 <div class="flex-grow w-full max-w-xl">
@@ -13,8 +14,8 @@
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
   </header>
   <main class="my-8">
-    {#if data.books.length}
-      {#each data.books as book}
+    {#if books.length}
+      {#each books as book}
         <article class="space-y-8">
           <header class="mb-4 pb-4 border-b border-gray-200">
             <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
@@ -37,7 +38,7 @@
                   <span>•</span>
                 {/if}
                 
-                <span><CalculateReadTime post={book} /></span>
+                <span><CalculateReadTime content={book} /></span>
               </div>
             </div>
           </header>

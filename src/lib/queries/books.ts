@@ -9,6 +9,7 @@ export async function getBooks(): Promise<Book[]> {
     slug,
     excerpt,
     body,
+    _type,
     "genre": {
       "title": genre->title
     },
@@ -26,6 +27,7 @@ export async function getBook(slug: string): Promise<Book> {
       slug,
       excerpt,
       body,
+      _type,
       "mainImage": {
         "url": mainImage.asset->url,
         "alt": mainImage.alt
