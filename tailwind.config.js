@@ -16,7 +16,10 @@ export default {
       },
       animation: {
         blink: 'blink 1500ms linear infinite',
-      }
+      },
+      colors: {
+        customOrange: 'rgba(237, 149, 37, 1)',
+      },
     },
   },
   plugins: []
