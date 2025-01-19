@@ -73,6 +73,7 @@ export const schemaTypes = [
       {name: 'author', type: 'reference', to: [{type: 'author'}]},
       {name: 'bookAuthor', type: 'reference', to: [{type: 'bookAuthor'}]},
       {name: 'genre', type: 'reference', to: [{type: 'genre'}]},
+      {name: 'quote', type: 'reference', to: [{type: 'quote'}]},
       {name: 'mainImage', type: 'image'},
       {name: 'publishedAt', type: 'datetime'},
       {name: 'excerpt', type: 'array', of: [RichTextEditor]},
@@ -87,7 +88,16 @@ export const schemaTypes = [
       {name: 'title', type: 'string'},
       {name: 'slug', type: 'slug'},
       {name: 'body', type: 'array', of: [RichTextEditor]},
+      {name: 'quote', type: 'reference', to: [{type: 'quote'}]},
+    ],
+  },
+  {
+    name: 'quote',
+    type: 'document',
+    fields: [
       {name: 'quote', type: 'string'},
+      {name: 'author', type: 'string'},
+      {name: 'link', type: 'url'},
     ],
   }
 ]
