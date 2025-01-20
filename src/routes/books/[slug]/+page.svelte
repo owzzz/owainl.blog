@@ -5,11 +5,12 @@
   import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 	import type { Book } from '$lib/types';
   import Sidebar from '$lib/components/sidebar/component.svelte';
+  
   export let data: PageData;
   const { book } = data as { book: Book };
 </script>
 
-<div class="flex-grow w-full max-w-[700px]">
+<div class="flex-grow w-full max-w-[800px] px-6">
   <header>
     <a href="/books" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Books_</a>
   </header>
@@ -21,7 +22,6 @@
           <span class="text-gray-500 text-sm">{book.bookAuthor.name}</span>
         {/if}
       </h1>
-      
       <div class="text-sm text-gray-500 mt-4 flex justify-start items-center gap-2">
         {#if book.genre}
           <ul class="flex flex-wrap space-x-1">
@@ -30,12 +30,8 @@
         {/if}
         <div>
           {#if book.publishedAt}
-            <span>Published: {formatDate(book.publishedAt)}</span>
+            <span>{formatDate(book.publishedAt)} • <CalculateReadTime content={book} /></span>
           {/if}
-          {#if book.publishedAt}
-            <span>•</span>
-          {/if}
-          <span><CalculateReadTime content={book} /></span>
         </div>
       </div>
     </div>

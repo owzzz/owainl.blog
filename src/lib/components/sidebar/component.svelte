@@ -20,10 +20,3 @@
     </ul>
   </div>  
 </nav>
-
-<style>
-  .active {
-    @apply text-blue-600 font-bold;
-    /* or whatever highlight styles you want */
-  }
-</style> 

@@ -1,3 +1,5 @@
+import { goto } from '$app/navigation';
+
 export function scrollSpy(node: HTMLElement) {
   const headings = document.querySelectorAll('h4[data-scroll-id]');
   const links = node.querySelectorAll('a[data-scroll-link]');
@@ -22,7 +24,7 @@ export function scrollSpy(node: HTMLElement) {
         // Update URL hash without triggering scroll
         if (currentSection && window.location.hash !== `#${currentSection}`) {
           isScrolling = true;
-          history.replaceState(null, '', `#${currentSection}`);
+          goto(`#${currentSection}`, { replaceState: true, noScroll: true });
           setTimeout(() => {
             isScrolling = false;
           }, 10);

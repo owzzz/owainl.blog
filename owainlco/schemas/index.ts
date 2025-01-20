@@ -1,5 +1,4 @@
 import RichTextEditor from "../lib/rich-text-editor";
-
 export const schemaTypes = [
   {
     name: 'author',
@@ -69,10 +68,12 @@ export const schemaTypes = [
     type: 'document',
     fields: [
       {name: 'title', type: 'string'},
+      {name: 'currentlyReading', type: 'boolean'}, 
       {name: 'slug', type: 'slug'},
       {name: 'author', type: 'reference', to: [{type: 'author'}]},
       {name: 'bookAuthor', type: 'reference', to: [{type: 'bookAuthor'}]},
       {name: 'genre', type: 'reference', to: [{type: 'genre'}]},
+      {name: 'quote', type: 'reference', to: [{type: 'quote'}]},
       {name: 'mainImage', type: 'image'},
       {name: 'publishedAt', type: 'datetime'},
       {name: 'excerpt', type: 'array', of: [RichTextEditor]},
@@ -87,7 +88,16 @@ export const schemaTypes = [
       {name: 'title', type: 'string'},
       {name: 'slug', type: 'slug'},
       {name: 'body', type: 'array', of: [RichTextEditor]},
+      {name: 'quote', type: 'reference', to: [{type: 'quote'}]},
+    ],
+  },
+  {
+    name: 'quote',
+    type: 'document',
+    fields: [
       {name: 'quote', type: 'string'},
+      {name: 'bookAuthor', type: 'reference', to: [{type: 'bookAuthor'}]},
+      {name: 'link', type: 'url'},
     ],
   }
 ]
