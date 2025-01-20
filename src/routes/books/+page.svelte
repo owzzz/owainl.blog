@@ -4,7 +4,6 @@
 	import type { PageData } from './$types';
 	import { formatDate } from '$lib/utils/format-date';
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
-  import Quote from '$lib/components/quote/component.svelte';
 
 	export let data: PageData;
   let books = data.books;
