@@ -68,7 +68,7 @@ export const schemaTypes = [
     type: 'document',
     fields: [
       {name: 'title', type: 'string'},
-      {name: 'currentlyReading', type: 'boolean', initialValue: false}, 
+      {name: 'currentlyReading', type: 'boolean'}, 
       {name: 'slug', type: 'slug'},
       {name: 'author', type: 'reference', to: [{type: 'author'}]},
       {name: 'bookAuthor', type: 'reference', to: [{type: 'bookAuthor'}]},
@@ -96,7 +96,7 @@ export const schemaTypes = [
     type: 'document',
     fields: [
       {name: 'quote', type: 'string'},
-      {name: 'author', type: 'string'},
+      {name: 'bookAuthor', type: 'reference', to: [{type: 'bookAuthor'}]},
       {name: 'link', type: 'url'},
     ],
   }

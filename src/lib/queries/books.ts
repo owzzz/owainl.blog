@@ -9,6 +9,11 @@ export async function getBooks(): Promise<Book[]> {
     slug,
     excerpt,
     body,
+    "quote": {
+        "quote": quote->quote,
+        "author": bookAuthor->name,
+        "link": quote->link
+      },
     _type,
     chapters[]-> {
       title,
@@ -33,6 +38,11 @@ export async function getBook(slug: string): Promise<Book> {
       slug,
       excerpt,
       body,
+      "quote": {
+        "quote": quote->quote,
+        "author": bookAuthor->name,
+        "link": quote->link
+      },
       _type,
       "mainImage": {
         "url": mainImage.asset->url,

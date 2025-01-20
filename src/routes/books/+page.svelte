@@ -4,6 +4,8 @@
 	import type { PageData } from './$types';
 	import { formatDate } from '$lib/utils/format-date';
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
+  import Quote from '$lib/components/quote/component.svelte';
+  import CurrentlyReadingLabel from '$lib/components/currently-reading-label/component.svelte';
 
 	export let data: PageData;
   let books = data.books;
@@ -16,8 +18,8 @@
   <main class="my-8">
     {#if books.length}
       {#each books as book}
-        <article class="space-y-8">
-          <header class="mb-4 pb-4 border-b border-gray-200">
+        <article class="space-y-6">
+          <header class="pb-4 border-b border-gray-200">
             <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
               {book.title}
               {#if book.bookAuthor}
@@ -27,7 +29,7 @@
             <div class="text-sm text-gray-500 my-2 flex justify-start items-center gap-2">
               {#if book.genre}
                 <ul class="flex flex-wrap space-x-1">
-                    <li class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{book.genre.title}</li>
+                  <li class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{book.genre.title}</li>
                 </ul>
               {/if}
               <div>
