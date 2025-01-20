@@ -5,7 +5,6 @@
   import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 	import type { Book } from '$lib/types';
   import Sidebar from '$lib/components/sidebar/component.svelte';
-  import CurrentlyReadingLabel from '$lib/components/currently-reading-label/component.svelte';
   
   export let data: PageData;
   const { book } = data as { book: Book };
