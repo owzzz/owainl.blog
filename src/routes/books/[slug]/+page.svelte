@@ -5,6 +5,7 @@
   import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 	import type { Book } from '$lib/types';
   import Sidebar from '$lib/components/sidebar/component.svelte';
+  import AudioPlayer from '$lib/components/audio-player/component.svelte';
   
   export let data: PageData;
   const { book } = data as { book: Book };
@@ -42,6 +43,7 @@
   </header>
   <main class="flex justify-between items-start gap-4 my-8">
     <article class="space-y-4 w-2/3">
+      <AudioPlayer slug={book.slug.current} title={book.title} type="book" />
       <main class="divide-y-4 divide-gray-200 space-y-8">
         {#if book.body}
           <PortableTextComponents value={book.body} />

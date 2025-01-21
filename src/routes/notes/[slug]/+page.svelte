@@ -4,6 +4,7 @@
   import { formatDate } from '$lib/utils/format-date';
   import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 	import type { Post } from '$lib/types';
+  import AudioPlayer from '$lib/components/audio-player/component.svelte';
 
   export let data: PageData;
   const { post } = data as { post: Post };
@@ -37,6 +38,7 @@
         </div>
       </header>
       <main>
+        <AudioPlayer slug={post.slug.current} title={post.title} type="post" />
         {#if post.body}
           <PortableTextComponents value={post.body} />
         {/if}
