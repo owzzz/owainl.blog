@@ -45,19 +45,28 @@
     <article class="space-y-4 w-2/3">
       <AudioPlayer slug={book.slug.current} title={book.title} type="book" />
       <main class="divide-y-4 divide-gray-200 space-y-8">
-        {#if book.body}
-          <PortableTextComponents value={book.body} />
+        {#if book.body && book.chapters?.length}
+          {#if book.body}
+            <PortableTextComponents value={book.body} />
+          {/if}
+          {#each book.chapters as chapter, idx}
+            <section class="first:pt-0 pt-10 not-first:pb-4">
+              <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal" id={chapter.slug.current} data-scroll-id={chapter.slug.current}>Chapter {idx + 1}: {chapter.title}</h4>
+              <PortableTextComponents value={chapter.body} />
+            </section>
+          {/each}
+        {:else}
+          <section>
+            <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal">📚 Currently Reading</h4>
+            <p>This is a placeholder for the book {book.title} that I'm currently reading, I'll begin to populate the with a summary of the book as I read it.</p>
+          </section> 
         {/if}
-        {#each book.chapters as chapter, idx}
-          <section class="first:pt-0 pt-10 not-first:pb-4">
-            <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal" id={chapter.slug.current} data-scroll-id={chapter.slug.current}>Chapter {idx + 1}: {chapter.title}</h4>
-            <PortableTextComponents value={chapter.body} />
-          </section>
-        {/each}
       </main>
     </article>
-    <aside class="w-1/3 sticky top-10">
-      <Sidebar book={book} />
-    </aside>
+    {#if book.chapters?.length}
+      <aside class="w-1/3 sticky top-10">
+        <Sidebar book={book} />
+      </aside>
+    {/if}
   </main>
 </div>
