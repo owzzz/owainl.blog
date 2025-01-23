@@ -17,7 +17,7 @@
     {#if books.length}
       {#each books as book}
         <article class="my-8 space-y-6">
-          <header class="py-6 border-b border-gray-200">
+          <header class="py-4 border-b border-gray-200">
             <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
               {book.title}
               {#if book.bookAuthor}
