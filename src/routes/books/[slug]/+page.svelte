@@ -8,7 +8,7 @@
   import AudioPlayer from '$lib/components/audio-player/component.svelte';
   
   export let data: PageData;
-  const { book } = data as { book: Book };
+  const { book, audio } = data as { book: Book, audio: string };
 </script>
 
 <div class="flex-grow w-full max-w-[800px] px-6">
@@ -43,7 +43,7 @@
   </header>
   <main class="flex justify-between items-start gap-4 my-8">
     <article class="space-y-4 w-2/3">
-      <AudioPlayer slug={book.slug.current} title={book.title} type="book" />
+      <AudioPlayer url={data.audio} title={book.title} />
       <main class="divide-y-4 divide-gray-200 space-y-8">
         {#if book.body && book.chapters?.length}
           {#if book.body}
