@@ -48,12 +48,11 @@ async function generateAndSaveAudio(slug: string, content: any, type: 'book' | '
     let text = '';
     if (type === 'book') {
       const bodyText = extractTextFromBlocks(content.body);
-      const excerptText = extractTextFromBlocks(content.excerpt);
       const chaptersText = content.chapters?.map(chapter => 
         extractTextFromBlocks(chapter.body)
       ).join('\n\n') || '';
       
-      text = [bodyText, excerptText, chaptersText].join('\n\n');
+      text = [bodyText, chaptersText].join('\n\n');
     } else {
       text = extractTextFromBlocks(content.body);
     }
