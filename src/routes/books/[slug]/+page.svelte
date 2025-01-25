@@ -47,7 +47,9 @@
       <main class="divide-y-4 divide-gray-200 space-y-8">
         {#if book.body && book.chapters?.length}
           {#if book.body}
-            <PortableTextComponents value={book.body} />
+            <section>
+              <PortableTextComponents value={book.body} />
+            </section>
           {/if}
           {#each book.chapters as chapter, idx}
             <section class="first:pt-0 pt-10 not-first:pb-4">
