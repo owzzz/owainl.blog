@@ -6,7 +6,7 @@
 	import type { Book } from '$lib/types';
   import Sidebar from '$lib/components/sidebar/component.svelte';
   import AudioPlayer from '$lib/components/audio-player/component.svelte';
-  
+  import Quote from '$lib/components/quote/component.svelte';
   export let data: PageData;
   const { book, audio } = data as { book: Book, audio: string };
 </script>
@@ -43,7 +43,9 @@
   </header>
   <main class="flex justify-between items-start gap-4 my-8">
     <article class="space-y-4 w-2/3">
-      <AudioPlayer url={data.audio} title={book.title} />
+      {#if audio}
+        <AudioPlayer url={audio} title={book.title} />
+      {/if}
       <main class="divide-y-4 divide-gray-200 space-y-8">
         {#if book.body && book.chapters?.length}
           {#if book.body}
@@ -56,6 +58,9 @@
               <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal" id={chapter.slug.current} data-scroll-id={chapter.slug.current}>Chapter {idx + 1}: {chapter.title}</h4>
               <PortableTextComponents value={chapter.body} />
             </section>
+            {#if chapter.quote}
+              <Quote quote={chapter.quote} />
+            {/if}
           {/each}
         {:else}
           <section>

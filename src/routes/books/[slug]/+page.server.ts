@@ -6,13 +6,12 @@ import type { PageServerLoad } from './$types';
 export const load: PageServerLoad = async ({ params }) => {
   try {
     const book = await getBook(params.slug);
+    console.log(book);
     const audio = await getAudio(params.slug);
     
     if (!book) {
       throw redirect(302, '/books');
     }
-
-    console.log(audio);
 
     return {
       book,
