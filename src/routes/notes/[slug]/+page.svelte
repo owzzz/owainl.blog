@@ -7,7 +7,7 @@
   import AudioPlayer from '$lib/components/audio-player/component.svelte';
 
   export let data: PageData;
-  const { post } = data as { post: Post };
+  const { post, audio } = data as { post: Post, audio: string };
 </script>
 
 <div class="flex-grow w-full max-w-xl">
@@ -38,7 +38,9 @@
         </div>
       </header>
       <main>
-        <AudioPlayer slug={post.slug.current} title={post.title} type="post" />
+        {#if audio}
+          <AudioPlayer url={audio} title={post.title} />
+        {/if}
         {#if post.body}
           <PortableTextComponents value={post.body} />
         {/if}

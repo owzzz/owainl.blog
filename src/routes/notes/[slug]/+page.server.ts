@@ -4,12 +4,14 @@ import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }: { params: { slug: string } }) => {
   const post = await getPost(params.slug);
+  const audio = await getAudio(params.slug);
   
   if (!post) {
     throw redirect(302, '/notes');
   }
   
   return {
-    post
+    post,
+    audio
   };
 };
