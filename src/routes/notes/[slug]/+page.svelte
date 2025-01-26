@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex-grow w-full max-w-xl">
-  <header class="flex justify-between items-center">
+  <header class="flex justify-between items-center px-6">
     <a href="/notes" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Notes_</a>
   </header>
   <main class="my-8 px-6">
