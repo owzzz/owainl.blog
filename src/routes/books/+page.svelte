@@ -2,7 +2,7 @@
 	import EmptyBanner from '$lib/components/empty-banner/component.svelte';
 	import CalculateReadTime from '$lib/components/calculate-read-time/component.svelte';
 	import type { PageData } from './$types';
-	import { formatDate } from '$lib/utils/format-date';
+	import PublishedAtLabel from '$lib/components/published-at-label/component.svelte';
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 
 	export let data: PageData;
@@ -10,10 +10,10 @@
 </script>
 
 <div class="flex-grow w-full max-w-xl">
-  <header>
+  <header class="px-6">
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
   </header>
-  <main class="divide-y-4 divide-gray-200 space-y-8">
+  <main class="divide-y-4 divide-gray-200 space-y-8 px-6 my-8">
     {#if books.length}
       {#each books as book}
         <article class="my-8 space-y-6">
@@ -32,12 +32,11 @@
               {/if}
               <div>
                 {#if book.publishedAt}
-                  <span>Published: {formatDate(book.publishedAt)}</span>
+                  <PublishedAtLabel publishedAt={book.publishedAt} />
                 {/if}
                 {#if book.publishedAt}
                   <span>•</span>
                 {/if}
-                
                 <span><CalculateReadTime content={book} /></span>
               </div>
             </div>

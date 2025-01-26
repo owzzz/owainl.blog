@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CalculateReadTime from '$lib/components/calculate-read-time/component.svelte';
 	import type { PageData } from './$types';
-  import { formatDate } from '$lib/utils/format-date';
+  import PublishedAtLabel from '$lib/components/published-at-label/component.svelte';
 	import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
   import EmptyBanner from '$lib/components/empty-banner/component.svelte';
 	import type { Post } from '$lib/types';
@@ -11,10 +11,10 @@
 </script>
 
 <div class="flex-grow w-full max-w-xl">
-  <header>
+  <header class="px-6">
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
   </header>
-  <main class="my-8">
+  <main class="my-8 px-6">
     {#if posts.length}
       {#each data.posts as post}
         <article class="space-y-4">
@@ -30,7 +30,7 @@
               {/if}
               <div>
                 {#if post.publishedAt}
-                  <span>Published: {formatDate(post.publishedAt)}</span>
+                  <PublishedAtLabel publishedAt={post.publishedAt} />
                 {/if}
                 {#if post.publishedAt}
                   <span>•</span>

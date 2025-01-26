@@ -1,10 +1,10 @@
 <script lang="ts">
 	import CalculateReadTime from '$lib/components/calculate-read-time/component.svelte';
   import type { PageData } from './$types';
-  import { formatDate } from '$lib/utils/format-date';
   import PortableTextComponents from '$lib/components/portable-text/portable-text-components.svelte';
 	import type { Post } from '$lib/types';
   import AudioPlayer from '$lib/components/audio-player/component.svelte';
+  import PublishedAtLabel from '$lib/components/published-at-label/component.svelte';
 
   export let data: PageData;
   const { post, audio } = data as { post: Post, audio: string };
@@ -14,7 +14,7 @@
   <header class="flex justify-between items-center">
     <a href="/notes" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Notes_</a>
   </header>
-  <main class="my-8">
+  <main class="my-8 px-6">
     <article class="space-y-4">
       <header class="mb-4 pb-4 border-b border-gray-200">
         <h1 class="font-title text-1xl md:text-3xl tracking-wide leading-normal">{post.title}</h1>
@@ -28,7 +28,7 @@
           {/if}
           <div>
             {#if post.publishedAt}
-              <span>Published: {formatDate(post.publishedAt)}</span>
+              <PublishedAtLabel publishedAt={post.publishedAt} />
             {/if}
             {#if post.publishedAt}
               <span>•</span>

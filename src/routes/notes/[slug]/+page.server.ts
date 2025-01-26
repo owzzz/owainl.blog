@@ -1,4 +1,5 @@
 import { getPost } from '$lib/queries/posts';
+import { getAudio } from '$lib/queries/supabase/storage/audio';
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
