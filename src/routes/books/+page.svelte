@@ -10,13 +10,13 @@
 </script>
 
 <div class="flex-grow w-full max-w-xl">
-  <header class="px-6">
+  <header class="py-4 px-6">
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
   </header>
-  <main class="divide-y-4 divide-gray-200 space-y-8 px-6 my-8">
+  <main class="divide-y-4 divide-gray-200 space-y-8 px-6 mb-8">
     {#if books.length}
       {#each books as book}
-        <article class="my-8 space-y-6">
+        <article class="mb-8 space-y-6">
           <header class="py-4 border-b border-gray-200">
             <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
               {book.title}

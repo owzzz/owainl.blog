@@ -11,10 +11,10 @@
 </script>
 
 <div class="flex-grow w-full max-w-xl">
-  <header class="px-6">
+  <header class="py-4 px-6">
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
   </header>
-  <main class="my-8 px-6">
+  <main class="mb-8 px-6">
     {#if posts.length}
       {#each data.posts as post}
         <article class="space-y-4">
