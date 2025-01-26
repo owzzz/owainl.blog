@@ -1,6 +1,5 @@
 <script lang="ts">
   export let quote: Quote;
-  console.log(quote);
 </script>
 
 <blockquote class="border-l-4 border-gray-200 pl-4 mt-6 mb-4">
