@@ -13,12 +13,12 @@
   <header class="py-4 px-6">
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
   </header>
-  <main class="divide-y-4 divide-gray-200 space-y-8 px-6 mb-8">
+  <main class="divide-y-4 space-y-8 divide-gray-200 px-6 pb-8">
     {#if books.length}
       {#each books as book}
-        <article class="mb-8 space-y-6">
-          <header class="py-4 border-b border-gray-200">
-            <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
+        <article class="pt-4 space-y-6">
+          <header class="mb-2 pb-2 border-b border-gray-200">
+            <h1 class="font-title text-2xl md:text-4xl tracking-wide leading-normal mt-2">
               {book.title}
               {#if book.bookAuthor}
                 <span class="text-gray-500 text-sm">{book.bookAuthor.name}</span>

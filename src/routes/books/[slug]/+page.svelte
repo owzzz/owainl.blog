@@ -16,9 +16,9 @@
   <header>
     <a href="/books" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Books_</a>
   </header>
-  <header class="flex flex-col-reverse md:flex-row justify-start md:justify-between items-center md:items-end mb-4 pb-4 border-b border-gray-200">
+  <header class="flex flex-col-reverse md:flex-row justify-start md:justify-between items-center md:items-end mb-2 pb-2 border-b border-gray-200">
     <div>
-      <h1 class="font-title text-1xl md:text-4xl tracking-wide leading-normal mt-2">
+      <h1 class="font-title text-2xl md:text-4xl tracking-wide leading-normal mt-2">
         {book.title}
         {#if book.bookAuthor}
           <span class="text-gray-500 text-sm">{book.bookAuthor.name}</span>
@@ -47,7 +47,7 @@
     {/if}
   </header>
   <main class="flex justify-between items-start gap-4 my-8">
-    <article class="space-y-4 w-full md:w-2/3">
+    <article class="space-y-4 w-full md:w-3/4">
       {#if audio}
         <AudioPlayer url={audio} title={book.title} />
       {/if}
@@ -76,7 +76,7 @@
       </main>
     </article>
     {#if book.chapters?.length}
-      <aside class="hidden md:block w-1/3 sticky top-10">
+      <aside class="hidden md:block w-1/4 sticky top-10">
         <Sidebar book={book} />
       </aside>
     {/if}

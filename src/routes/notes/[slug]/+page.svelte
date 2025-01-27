@@ -16,8 +16,8 @@
   </header>
   <main class="my-8 px-6">
     <article class="space-y-4">
-      <header class="mb-4 pb-4 border-b border-gray-200">
-        <h1 class="font-title text-1xl md:text-3xl tracking-wide leading-normal">{post.title}</h1>
+      <header class="mb-2 pb-2 border-b border-gray-200">
+        <h1 class="font-title text-2xl md:text-4xl tracking-wide leading-normal mt-2">{post.title}</h1>
         <div class="text-sm text-gray-500 my-2 flex justify-start items-center gap-2">
           {#if post.categories?.length}
             <ul class="flex flex-wrap space-x-1">

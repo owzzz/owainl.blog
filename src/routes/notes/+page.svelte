@@ -14,12 +14,12 @@
   <header class="py-4 px-6">
     <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Notes_</span>
   </header>
-  <main class="mb-8 px-6">
+  <main class="divide-y-4 space-y-8 divide-gray-200 px-6 pb-8">
     {#if posts.length}
       {#each data.posts as post}
-        <article class="space-y-4">
-          <header class="mb-4 pb-4 border-b border-gray-200">
-            <h1 class="font-title text-1xl md:text-3xl tracking-wide leading-normal">{post.title}</h1>
+        <article class="pt-4 space-y-6">
+          <header class="mb-2 pb-2 border-b border-gray-200">
+            <h1 class="font-title text-2xl md:text-4xl tracking-wide leading-normal mt-2">{post.title}</h1>
             <div class="text-sm text-gray-500 my-2 flex justify-start items-center gap-2">
               {#if post.categories?.length}
                 <ul class="flex flex-wrap space-x-1">
