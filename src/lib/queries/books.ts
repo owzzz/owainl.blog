@@ -10,8 +10,8 @@ export async function getBooks(): Promise<Book[]> {
     excerpt,
     body,
     "quote": {
-        "quote": quote->quote,
-        "author": quote->author,
+        "text": quote->quote,
+        "author": quote->bookAuthor->name,
         "link": quote->link
       },
     _type,
@@ -20,8 +20,8 @@ export async function getBooks(): Promise<Book[]> {
       slug,
       body,
       "quote": {
-        "quote": quote->quote,
-        "author": quote->author,
+        "text": quote->quote,
+        "author": quote->bookAuthor->name,
         "link": quote->link
       }
     },
@@ -43,8 +43,8 @@ export async function getBook(slug: string): Promise<Book> {
       excerpt,
       body,
       "quote": {
-        "quote": quote->quote,
-        "author": quote->author,
+        "text": quote->quote,
+        "author": quote->bookAuthor->name,
         "link": quote->link
       },
       _type,
@@ -63,14 +63,9 @@ export async function getBook(slug: string): Promise<Book> {
         slug,
         body,
         "quote": {
-          "quote": quote->quote,
-          "author": quote->author,
+          "text": quote->quote,
+          "author": quote->bookAuthor->name,
           "link": quote->link
-        }
-      },
-      "debug": {
-        "allFields": {
-          ...^
         }
       }
     }`,

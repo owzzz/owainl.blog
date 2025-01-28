@@ -62,10 +62,11 @@
             <section class="first:pt-0 pt-10 not-first:pb-4">
               <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal" id={chapter.slug.current} data-scroll-id={chapter.slug.current}>Chapter {idx + 1}: {chapter.title}</h4>
               <PortableTextComponents value={chapter.body} />
+
+              {#if chapter.quote}
+                <Quote quote={chapter.quote} />
+              {/if}
             </section>
-            {#if chapter.quote}
-              <Quote quote={chapter.quote} />
-            {/if}
           {/each}
         {:else}
           <section>
