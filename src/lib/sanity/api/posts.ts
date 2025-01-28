@@ -1,5 +1,5 @@
 import groq from 'groq';
-import { client } from '../sanity/client.server';
+import { client } from '$lib/sanity/client.server';
 import type { Post } from '$lib/types';
 
 export async function getPosts(category?: string): Promise<Post[]> {

@@ -1,7 +1,5 @@
 <script lang="ts">
   export let quote: Quote;
-
-  console.log(quote);
 </script>
 
 {#if quote.text && quote.author}

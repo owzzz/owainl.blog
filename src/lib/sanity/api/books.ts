@@ -1,5 +1,5 @@
 import groq from 'groq';
-import { client } from '../sanity/client.server';
+import { client } from '../client.server';
 import type { Book } from '$lib/types';
 
 export async function getBooks(): Promise<Book[]> {

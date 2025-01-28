@@ -1,4 +1,4 @@
-import { getBooks } from '$lib/queries/books';
+import { getBooks } from '$lib/sanity/api/books';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {

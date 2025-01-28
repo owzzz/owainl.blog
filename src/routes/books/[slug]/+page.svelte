@@ -68,6 +68,7 @@
               {/if}
             </section>
           {/each}
+
         {:else}
           <section>
             <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal">📚 Currently Reading</h4>
