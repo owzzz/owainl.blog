@@ -10,8 +10,10 @@
 {#if readTime > 0}
   Reading Time: {readTime}
   {#if readTime === 1}
-    <span>Min<span class="hidden md:inline">ute</span></span>
+    <span class="inline md:hidden">Min</span>
+    <span class="hidden md:inline">Minute</span>
   {:else}
-    <span>Mins<span class="hidden md:inline">utes</span></span>
+    <span class="inline md:hidden">Mins</span>
+    <span class="hidden md:inline">Minutes</span>
   {/if}
 {/if}
