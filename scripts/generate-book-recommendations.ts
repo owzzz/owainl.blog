@@ -1,6 +1,6 @@
 import { getBook, openai, supabase } from './clients';
 import { extractTextFromBlocks } from "../src/lib/utils/extract-text";
-import { generateAndSaveAudio } from './generate-audio';
+import { getBookRecommendations } from '../src/lib/book-recommendations/recommendations';
 
 type Recommendation = {
   title: string;
@@ -16,6 +16,12 @@ export async function generateBookRecommendations(slug: string): Promise<void> {
 
   if (!book) {
     throw new Error('Book not found');
+  }
+
+  const ifBookRecommendationsExist = await checkIfBookRecommendationsExist(book._id);
+
+  if (ifBookRecommendationsExist) {
+    throw new Error('Book recommendations already exist');
   }
 
   const context = extractTextFromBlocks(book.body);
@@ -52,7 +58,6 @@ Blog Post Content: ${context}`
     saveBookRecommendationsToStorage(recommendations);
 
   } catch (error) {
-    console.error('Error parsing JSON:', error);
     throw new Error('Failed to parse JSON response');
   }
 }
@@ -65,12 +70,21 @@ async function saveBookRecommendationsToStorage(recommendations: Recommendation[
   const { data, error } = await supabase.from('book_recommendations').insert(recommendations);
 
   if (error) {
-    console.error('Error saving book recommendations to storage:', error);
     throw new Error('Failed to save book recommendations to storage');
   }
 
   console.log('Book recommendations saved to storage:', data);
 }
+
+async function checkIfBookRecommendationsExist(bookId: string) {
+  const { data } = await supabase
+    .from('book_recommendations')
+    .select('title, description')
+    .eq('document_id', bookId);
+
+  return data && data.length > 0;
+}
+
 async function main() {
   const slug = process.argv[2];
 
