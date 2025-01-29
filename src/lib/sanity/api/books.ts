@@ -4,6 +4,7 @@ import type { Book } from '$lib/types';
 
 export async function getBooks(): Promise<Book[]> {
   return await client.fetch(groq`*[_type == "book" && defined(slug.current) && publishedAt != null] | order(publishedAt desc) {
+    _id,
     title,
     publishedAt,
     slug,
@@ -37,6 +38,7 @@ export async function getBooks(): Promise<Book[]> {
 export async function getBook(slug: string): Promise<Book> {
 	return await client.fetch(
     groq`*[_type == "book" && slug.current == $slug && publishedAt != null][0] {
+      _id,
       title,
       publishedAt,
       slug,

@@ -4,7 +4,7 @@ import { createClient as createSupabaseClient } from '@supabase/supabase-js';
 import OpenAI from 'openai';
 import groq from 'groq';
 
-if (!process.env.PUBLIC_SUPABASE_URL || !process.env.PUBLIC_SUPABASE_ANON_KEY) {
+if (!process.env.PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
   throw new Error('Missing Supabase environment variables');
 }
 
@@ -14,7 +14,7 @@ if (!process.env.OPENAI_API_KEY) {
 
 export const supabase = createSupabaseClient(
   process.env.PUBLIC_SUPABASE_URL,
-  process.env.PUBLIC_SUPABASE_ANON_KEY
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
 export const sanity = createClient({
@@ -32,6 +32,7 @@ export const openai = new OpenAI({
 export async function getBook(slug: string): Promise<Book> {
 	return await sanity.fetch(
     groq`*[_type == "book" && slug.current == $slug && publishedAt != null][0] {
+      _id,
       slug,
       excerpt,
       body,
@@ -46,9 +47,10 @@ export async function getBook(slug: string): Promise<Book> {
   );
 }
 
-export async function getPost(slug: string): Promise<Book> {
+export async function getPost(slug: string): Promise<Post> {
 	return await sanity.fetch(
     groq`*[_type == "post" && slug.current == $slug && publishedAt != null][0] {
+      _id,
       slug,
       excerpt,
       body

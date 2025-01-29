@@ -7,9 +7,12 @@
   import AudioPlayer from '$lib/components/audio-player/component.svelte';
   import Quote from '$lib/components/quote/component.svelte';
   import PublishedAtLabel from '$lib/components/published-at-label/component.svelte';
+	import type { BookRecommendation } from '$lib/book-recommendations/recommendations';
+  import BookRecommendations from '$lib/components/book-recommendations/component.svelte';
+
   export let data: PageData;
 
-  const { book, audio } = data as { book: Book, audio: string };
+  const { book, audio, bookRecommendations } = data as { book: Book, audio: string, bookRecommendations: BookRecommendation[] };
 </script>
 
 <div class="flex-grow w-full max-w-[800px] px-6">
@@ -69,6 +72,7 @@
             </section>
           {/each}
 
+          <BookRecommendations recommendations={bookRecommendations} />
         {:else}
           <section>
             <h4 class="font-title text-xl md:text-2xl tracking-wide leading-normal">📚 Currently Reading</h4>

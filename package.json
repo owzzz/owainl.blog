@@ -14,7 +14,8 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"generate-audio": "tsx scripts/generate-audio.ts"
+		"generate-audio": "tsx scripts/generate-audio.ts",
+		"generate-book-recommendations": "tsx scripts/generate-book-recommendations.ts"
 	},
 	"devDependencies": {
 		"@fontsource/be-vietnam-pro": "^5.0.18",
