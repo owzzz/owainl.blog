@@ -17,7 +17,7 @@
 
 <div class="flex-grow w-full max-w-[800px] px-6">
   <header>
-    <a href="/books" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Books_</a>
+    <a href="/books" class="inline-block text-gray-400 font-semibold uppercase text-xs hover:underline">Books Summaries_</a>
   </header>
   <header class="flex flex-col-reverse md:flex-row justify-start md:justify-between items-center md:items-end mb-2 pb-2 border-b border-gray-200">
     <div>

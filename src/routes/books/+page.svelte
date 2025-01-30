@@ -11,7 +11,7 @@
 
 <div class="flex-grow w-full max-w-xl">
   <header class="py-4 px-6">
-    <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Books_</span>
+    <span class='inline-block text-gray-400 font-semibold uppercase text-xs'>Book Summaries_</span>
   </header>
   <main class="divide-y-4 space-y-8 divide-gray-200 px-6 pb-8">
     {#if books.length}

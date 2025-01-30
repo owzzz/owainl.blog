@@ -6,7 +6,7 @@
 
 {#if recommendations.length > 0}
   <section class="pt-10">
-    <h4 class="text-gray-400 font-semibold uppercase text-xs">Continue Reading</h4>
+    <h4 class="text-gray-400 font-semibold uppercase text-xs">Book Recommendations</h4>
     <ul class="mt-4 space-y-6 md:space-y-0 md:flex md:justify-start md:items-start gap-4">
       {#each recommendations as link}
         <li>
