@@ -14,7 +14,7 @@
 
   <div class="content !space-y-1 mt-6">
     <p>Passionate About Digital Technologies, Great Design and Clever Entrepreneurial Ideas.</p>
-    <p>Building Software at Apple.</p>
+    <p>Building Tools @ Apple.</p>
     <p>Austin, Texas.</p>
   </div>
 
