@@ -14,7 +14,6 @@ export default {
       decorators: [
         { title: 'Strong', value: 'strong' },
         { title: 'Emphasis', value: 'em' },
-        { title: 'Code', value: 'code' },
         { title: 'Underline', value: 'underline' },
         { title: 'Italic', value: 'italic' },
         { title: 'Strike', value: 'strike' },

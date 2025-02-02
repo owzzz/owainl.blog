@@ -14,7 +14,7 @@
   {value}
   components={{
     types: {
-      code: CodeBlock,
+      codeBlock: CodeBlock,
       table: Table,
     },
     marks: {
