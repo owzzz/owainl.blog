@@ -8,8 +8,6 @@
 
 	export let data: PageData;
   const { posts } = data as { posts: Post[] };
-
-  console.log(posts);
 </script>
 
 <div class="flex-grow w-full max-w-xl">
