@@ -5,7 +5,6 @@
   import Paragraph from './paragraph.svelte';
   import ListWrapper from './list-wrapper.svelte';
   import Table from './table.svelte';
-  import AbsoluteUrl from './absolute-url.svelte';
 
   export let value: any;
 </script>
@@ -16,9 +15,6 @@
     types: {
       codeBlock: CodeBlock,
       table: Table,
-    },
-    marks: {
-      link: AbsoluteUrl
     },
     block: {
       normal: Paragraph,
