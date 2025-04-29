@@ -8,5 +8,13 @@ export default defineConfig({
 	},
 	optimizeDeps: {
 		exclude: ['punycode']
+	},
+	build: {
+		minify: 'terser',
+		rollupOptions: {
+			output: {
+				manualChunks: undefined
+			}
+		}
 	}
 });
