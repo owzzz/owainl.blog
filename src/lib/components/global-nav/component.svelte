@@ -7,7 +7,7 @@
     <div class="flex items-center justify-between max-w-6xl w-full">
         <a data-sveltekit-preload-data class="text-sm text-black tracking-wide" href="/" in:fade={{ delay: 0 }}>OWAINL.co</a>
         <ul class='flex space-x-4 md:space-x-8'>
-            <li><a data-sveltekit-preload-data class="nav-link text-xs {$page.url.pathname === '/about' ? 'font-bold underline' : ''}" href="/about" in:fade={{ delay: 500 }}>About</a></li>
+            <li><a data-sveltekit-preload-data class="nav-link text-xs {$page.url.pathname === '/about' ? 'font-bold nav-link-active' : ''}" href="/about" in:fade={{ delay: 500 }}>About</a></li>
             <li><a class="nav-link text-xs" href="mailto:owain.llew@gmail.com?subject=Website%20enquiry" in:fade={{ delay: 1000 }}>Contact</a></li>
         </ul>
     </div>
@@ -34,7 +34,7 @@ header > div {
 .nav-link {
     position: relative;
 }
-.nav-link::after {
+.nav-link::after, .nav-link-active::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -46,7 +46,7 @@ header > div {
   text-decoration: none;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after, .nav-link-active::after {
   width: 100%;
 }
 </style>
