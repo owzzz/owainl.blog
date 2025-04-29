@@ -1,7 +1,6 @@
 <main class="flex-1 flex flex-col items-center justify-center w-full px-6 space-y-6 pb-6 mt-4 md:mt-8">
     <section class='w-full max-w-[640px]'>
         <header class='border-b border-gray-200 mb-6'>
-            <span class='inline-block text-gray-400 font-semibold uppercase text-xs mb-4'>About_</span>
             <h1 class="font-title text-3xl md:text-4xl pb-4">Hey, I'm <span class="text-gray-500">Owain Llewellyn</span>,<br/>a Full Stack Engineer &amp; UX Designer based in Austin, TX.</h1>
         </header>
         <div class="content">
